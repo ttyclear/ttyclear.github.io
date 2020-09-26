@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ttyclear.github.io</id>
     <title>ttyclear的小窝</title>
-    <updated>2020-09-26T04:14:22.569Z</updated>
+    <updated>2020-09-26T04:34:52.268Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ttyclear.github.io"/>
     <link rel="self" href="https://ttyclear.github.io/atom.xml"/>
@@ -10,6 +10,175 @@
     <logo>https://ttyclear.github.io/images/avatar.png</logo>
     <icon>https://ttyclear.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, ttyclear的小窝</rights>
+    <entry>
+        <title type="html"><![CDATA[ttyclear的板子]]></title>
+        <id>https://ttyclear.github.io/post/ttyclear-de-ban-zi/</id>
+        <link href="https://ttyclear.github.io/post/ttyclear-de-ban-zi/">
+        </link>
+        <updated>2020-09-26T04:19:07.000Z</updated>
+        <content type="html"><![CDATA[<p><strong><s>他更了他更了鸽子博主居然更新了</s></strong></p>
+<h1 id="图论有关">图论有关</h1>
+<blockquote>
+<h2 id="omnlogn堆优化dijkstra"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mo>(</mo><mi>m</mi><mo>+</mo><mi>n</mi><mo>)</mo><mo separator="true">⋅</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O((m+n)·logn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mopen">(</span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">n</span><span class="mclose">)</span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>堆优化Dijkstra</h2>
+</blockquote>
+<pre><code>#include &lt;bits/stdc++.h&gt;
+#define endl '\n'
+#define fast ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)
+#define ll long long
+#define ull unsigned long long
+using namespace std;
+const int N=1e5+5;
+const int M=2*1e5+5;
+const int inf=2147483647;
+const int mod=1e9+7;
+const int fx[5]={0,-1,0,1,0};
+const int fy[5]={0,0,-1,0,1};
+inline int read()
+{
+    int x=0,f=1;char ch=getchar();
+    while (ch&lt;'0' || ch&gt;'9'){if(ch=='-')f=-1;ch=getchar();}
+    while (ch&gt;='0' &amp;&amp; ch&lt;='9'){x=(x&lt;&lt;3)+(x&lt;&lt;1);x+=(ch-'0');ch=getchar();}
+    return x*f;
+}
+
+void write(int x)
+{
+    if (x&lt;0) putchar('-'),x=-x;
+    if (x&gt;10) write(x/10);
+    putchar(x%10+'0');
+}
+
+int n,m,s,tot;//以s为起点，n个结点，m条边
+int Next[M],edge[M],ver[M],head[N],dis[N];
+bool vis[N];
+
+struct node
+{
+  int dis,id;
+  bool operator&lt;(const node&amp;tty)const{return tty.dis&lt;dis;}
+};
+
+int add_edge(int x,int y,int z){ver[++tot]=y,edge[tot]=z,Next[tot]=head[x],head[x]=tot;}
+priority_queue&lt;node&gt;q;
+
+int dijkstra(int s)
+{
+  memset(dis,0x3f,sizeof(dis));
+  dis[s]=0;q.push(node{0,s});
+  while (q.size())
+  {
+    int x=q.top().id;q.pop();
+    if(vis[x])   continue;
+    vis[x]=1;
+    for (int i=head[x];i;i=Next[i])
+    {
+      int y=ver[i],z=edge[i];
+      if (dis[y]&gt;dis[x]+z)
+      {
+        dis[y]=dis[x]+z;
+        q.push(node{dis[y],y});
+      }
+    }
+  }
+}
+
+int main()
+{
+  fast;
+  cin&gt;&gt;n&gt;&gt;m&gt;&gt;s;
+  for (int i=1;i&lt;=m;i++)
+  {
+    int x,y,z;
+    cin&gt;&gt;x&gt;&gt;y&gt;&gt;z;
+    add_edge(x,y,z);
+  }
+  dijkstra(s);
+  for (int i=1;i&lt;=n;i++)
+     cout&lt;&lt;dis[i]&lt;&lt;' ';
+  return 0;
+}
+</code></pre>
+<blockquote>
+<h2 id="okm的spfak为常数"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>k</mi><mi>m</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(km)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord mathdefault">m</span><span class="mclose">)</span></span></span></span>的SPFA（k为常数）</h2>
+</blockquote>
+<pre><code>#include &lt;bits/stdc++.h&gt;
+#define endl '\n'
+#define fast ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)
+#define ll long long
+#define ull unsigned long long
+using namespace std;
+const int N=1e5+5;
+const int M=5*1e5+5;
+const ll inf=0x3f;
+const int mod=1e9+7;
+const int fx[5]={0,-1,0,1,0};
+const int fy[5]={0,0,-1,0,1};
+inline int read()
+{
+    int x=0,f=1;char ch=getchar();
+    while (ch&lt;'0' || ch&gt;'9'){if(ch=='-')f=-1;ch=getchar();}
+    while (ch&gt;='0' &amp;&amp; ch&lt;='9'){x=(x&lt;&lt;3)+(x&lt;&lt;1);x+=(ch-'0');ch=getchar();}
+    return x*f;
+}
+
+void write(int x)
+{
+    if (x&lt;0) putchar('-'),x=-x;
+    if (x&gt;10) write(x/10);
+    putchar(x%10+'0');
+}
+
+int n,m,s,tot;
+ll Next[M],edge[M],ver[M],head[N],dis[N];
+bool vis[N];
+queue&lt;int&gt;q;
+
+void add_edge(int x,int y,int z){ver[++tot]=y,edge[tot]=z,Next[tot]=head[x],head[x]=tot;}
+
+void spfa(int s)
+{
+  dis[s]=0,vis[s]=1;q.push(s);
+  while (!q.empty())
+  {
+    int x=q.front();q.pop();
+    vis[x]=0;
+    for (int i=head[x];i;i=Next[i])
+    {
+      int y=ver[i],z=edge[i];
+      if (dis[y]&gt;dis[x]+z)
+      {
+        dis[y]=dis[x]+z;
+        if (!vis[y])
+        {
+          q.push(y);
+          vis[y]=1;
+        }
+      }
+    }
+  }
+}
+
+int main()
+{
+  fast;
+  cin&gt;&gt;n&gt;&gt;m&gt;&gt;s;
+  for (int i=1;i&lt;=m;i++)
+  {
+    int x,y,z;
+    cin&gt;&gt;x&gt;&gt;y&gt;&gt;z;
+    add_edge(x,y,z);
+  }
+  for (int i=1;i&lt;=n;i++)   dis[i]=2147483647;
+  spfa(s);
+  for (int i=1;i&lt;=n;i++)
+     cout&lt;&lt;dis[i]&lt;&lt;' ';
+  return 0;
+}
+</code></pre>
+<p>(PS:之前一直忘了memset是对字节赋值，写出了&quot;memset(dis,inf,sizeof(dis))&quot;的惊人代码，死活调不对QAQ)</p>
+<h2 id="不定期更新">不定期更新</h2>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[关于]]></title>
         <id>https://ttyclear.github.io/post/about/</id>
@@ -26,6 +195,8 @@
 <p>Codeforces：</p>
 <p><a href="https://codeforces.com/profile/tyclear">tyclear</a></p>
 <p><a href="https://codeforces.com/profile/ttyclear">ttyclear</a></p>
+<p>友链：</p>
+<p><a href="lycltb.top">神仙lyc<img src="http://lycltb.top//images/avatar.png" alt="lycorz" loading="lazy"></a></p>
 ]]></content>
     </entry>
 </feed>
