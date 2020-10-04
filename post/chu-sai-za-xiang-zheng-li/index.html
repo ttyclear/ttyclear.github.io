@@ -1,22 +1,107 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://ttyclear.github.io</id>
-    <title>ttyclear的小窝</title>
-    <updated>2020-10-04T03:20:15.909Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://ttyclear.github.io"/>
-    <link rel="self" href="https://ttyclear.github.io/atom.xml"/>
-    <subtitle>AFOer|Think twice,Code once.</subtitle>
-    <logo>https://ttyclear.github.io/images/avatar.png</logo>
-    <icon>https://ttyclear.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, ttyclear的小窝</rights>
-    <entry>
-        <title type="html"><![CDATA[初赛数学杂项整理]]></title>
-        <id>https://ttyclear.github.io/post/chu-sai-za-xiang-zheng-li/</id>
-        <link href="https://ttyclear.github.io/post/chu-sai-za-xiang-zheng-li/">
-        </link>
-        <updated>2020-10-04T02:25:30.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>初赛数学杂项整理 | ttyclear的小窝</title>
+<link rel="shortcut icon" href="https://ttyclear.github.io/favicon.ico?v=1601781610736">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://ttyclear.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="初赛数学杂项整理 | ttyclear的小窝 - Atom Feed" href="https://ttyclear.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="
+tty实在是太菜了，她需要把自己学到的各种东西整理一下/kk
+
+1.主定理
+原文，整理的有自己的理解，不保证严格符合原定义
+对于一个递归式 T(n)=aT(nb)+f(n)T(n)=aT(\frac{n}{b})+f(n)T(n)=aT(..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://ttyclear.github.io">
+  <img class="avatar" src="https://ttyclear.github.io/images/avatar.png?v=1601781610736" alt="">
+  </a>
+  <h1 class="site-title">
+    ttyclear的小窝
+  </h1>
+  <p class="site-description">
+    AFOer|Think twice,Code once.
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/ttyclear" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+        <a href="https://www.zhihu.com/people/ttyclear" target="_blank">
+          <i class="ri-zhihu-line"></i>
+        </a>
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              初赛数学杂项整理
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-10-04
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <blockquote>
 <h3 id="tty实在是太菜了她需要把自己学到的各种东西整理一下kk">tty实在是太菜了，她需要把自己学到的各种东西整理一下/kk</h3>
 </blockquote>
 <h2 id="1主定理">1.主定理</h2>
@@ -36,196 +121,90 @@
 1.从<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>个数中选取<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span>个数，每个数可被重复选取的方案个数：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>C</mi><mrow><mi>n</mi><mo>+</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow><mi>k</mi></msubsup></mrow><annotation encoding="application/x-tex">C_{n+k-1}^k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.190547em;vertical-align:-0.34143899999999994em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-2.4168920000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">+</span><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.34143899999999994em;"><span></span></span></span></span></span></span></span></span></span></p>
 <p>2.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">a_1+a_2+...+a_n=m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span>的正整数解的个数（将<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span>件物品分给<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>个人，不允许有人为空的方案数）：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>C</mi><mrow><mi>m</mi><mo>−</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msubsup></mrow><annotation encoding="application/x-tex">C_{m-1}^{n-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.178878em;vertical-align:-0.324639em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.854239em;"><span style="top:-2.433692em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.1031310000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.324639em;"><span></span></span></span></span></span></span></span></span></span></p>
 <p>3.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">a_1+a_2+...+a_n=m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span>的非负整数解的个数（将<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span>件物品分给<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>个人，允许有人为空的方案数）：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>C</mi><mrow><mi>n</mi><mo>+</mo><mi>m</mi><mo>−</mo><mn>1</mn></mrow><mrow><mi>m</mi><mo>−</mo><mn>1</mn></mrow></msubsup></mrow><annotation encoding="application/x-tex">C_{n+m-1}^{m-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.178878em;vertical-align:-0.324639em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.854239em;"><span style="top:-2.433692em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">+</span><span class="mord mathdefault mtight">m</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.1031310000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.324639em;"><span></span></span></span></span></span></span></span></span></span></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ttyclear的板子]]></title>
-        <id>https://ttyclear.github.io/post/ttyclear-de-ban-zi/</id>
-        <link href="https://ttyclear.github.io/post/ttyclear-de-ban-zi/">
-        </link>
-        <updated>2020-09-26T04:19:07.000Z</updated>
-        <content type="html"><![CDATA[<p><strong><s>他更了他更了鸽子博主居然更新了</s></strong></p>
-<h1 id="图论有关">图论有关</h1>
-<blockquote>
-<h2 id="omnlogn堆优化dijkstra"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mo>(</mo><mi>m</mi><mo>+</mo><mi>n</mi><mo>)</mo><mo separator="true">⋅</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O((m+n)·logn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mopen">(</span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">n</span><span class="mclose">)</span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>堆优化Dijkstra</h2>
-</blockquote>
-<pre><code>#include &lt;bits/stdc++.h&gt;
-#define endl '\n'
-#define fast ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)
-#define ll long long
-#define ull unsigned long long
-using namespace std;
-const int N=1e5+5;
-const int M=2*1e5+5;
-const int inf=2147483647;
-const int mod=1e9+7;
-const int fx[5]={0,-1,0,1,0};
-const int fy[5]={0,0,-1,0,1};
-inline int read()
-{
-    int x=0,f=1;char ch=getchar();
-    while (ch&lt;'0' || ch&gt;'9'){if(ch=='-')f=-1;ch=getchar();}
-    while (ch&gt;='0' &amp;&amp; ch&lt;='9'){x=(x&lt;&lt;3)+(x&lt;&lt;1);x+=(ch-'0');ch=getchar();}
-    return x*f;
-}
 
-void write(int x)
-{
-    if (x&lt;0) putchar('-'),x=-x;
-    if (x&gt;10) write(x/10);
-    putchar(x%10+'0');
-}
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#tty%E5%AE%9E%E5%9C%A8%E6%98%AF%E5%A4%AA%E8%8F%9C%E4%BA%86%E5%A5%B9%E9%9C%80%E8%A6%81%E6%8A%8A%E8%87%AA%E5%B7%B1%E5%AD%A6%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E4%B8%9C%E8%A5%BF%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Bkk">tty实在是太菜了，她需要把自己学到的各种东西整理一下/kk</a></li>
+</ul>
+</li>
+<li><a href="#1%E4%B8%BB%E5%AE%9A%E7%90%86">1.主定理</a></li>
+<li><a href="#2%E5%90%84%E7%A7%8D%E6%95%B0">2.各种数</a></li>
+</ul>
+</li>
+</ul>
 
-int n,m,s,tot;//以s为起点，n个结点，m条边
-int Next[M],edge[M],ver[M],head[N],dis[N];
-bool vis[N];
+              </div>
+            </div>
+          </article>
+        </div>
 
-struct node
-{
-  int dis,id;
-  bool operator&lt;(const node&amp;tty)const{return tty.dis&lt;dis;}
-};
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://ttyclear.github.io/post/ttyclear-de-ban-zi/">
+              <h3 class="post-title">
+                ttyclear的板子
+              </h3>
+            </a>
+          </div>
+        
 
-int add_edge(int x,int y,int z){ver[++tot]=y,edge[tot]=z,Next[tot]=head[x],head[x]=tot;}
-priority_queue&lt;node&gt;q;
+        
 
-int dijkstra(int s)
-{
-  memset(dis,0x3f,sizeof(dis));
-  dis[s]=0;q.push(node{0,s});
-  while (q.size())
-  {
-    int x=q.top().id;q.pop();
-    if(vis[x])   continue;
-    vis[x]=1;
-    for (int i=head[x];i;i=Next[i])
-    {
-      int y=ver[i],z=edge[i];
-      if (dis[y]&gt;dis[x]+z)
-      {
-        dis[y]=dis[x]+z;
-        q.push(node{dis[y],y});
-      }
-    }
-  }
-}
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://ttyclear.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
 
-int main()
-{
-  fast;
-  cin&gt;&gt;n&gt;&gt;m&gt;&gt;s;
-  for (int i=1;i&lt;=m;i++)
-  {
-    int x,y,z;
-    cin&gt;&gt;x&gt;&gt;y&gt;&gt;z;
-    add_edge(x,y,z);
-  }
-  dijkstra(s);
-  for (int i=1;i&lt;=n;i++)
-     cout&lt;&lt;dis[i]&lt;&lt;' ';
-  return 0;
-}
-</code></pre>
-<blockquote>
-<h2 id="okm的spfak为常数"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>k</mi><mi>m</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(km)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord mathdefault">m</span><span class="mclose">)</span></span></span></span>的SPFA（k为常数）</h2>
-</blockquote>
-<pre><code>#include &lt;bits/stdc++.h&gt;
-#define endl '\n'
-#define fast ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)
-#define ll long long
-#define ull unsigned long long
-using namespace std;
-const int N=1e5+5;
-const int M=5*1e5+5;
-const ll inf=0x3f;
-const int mod=1e9+7;
-const int fx[5]={0,-1,0,1,0};
-const int fy[5]={0,0,-1,0,1};
-inline int read()
-{
-    int x=0,f=1;char ch=getchar();
-    while (ch&lt;'0' || ch&gt;'9'){if(ch=='-')f=-1;ch=getchar();}
-    while (ch&gt;='0' &amp;&amp; ch&lt;='9'){x=(x&lt;&lt;3)+(x&lt;&lt;1);x+=(ch-'0');ch=getchar();}
-    return x*f;
-}
+      </div>
+    </div>
 
-void write(int x)
-{
-    if (x&lt;0) putchar('-'),x=-x;
-    if (x&gt;10) write(x/10);
-    putchar(x%10+'0');
-}
+    <script>
+      hljs.initHighlightingOnLoad()
 
-int n,m,s,tot;
-ll Next[M],edge[M],ver[M],head[N],dis[N];
-bool vis[N];
-queue&lt;int&gt;q;
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
 
-void add_edge(int x,int y,int z){ver[++tot]=y,edge[tot]=z,Next[tot]=head[x],head[x]=tot;}
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
 
-void spfa(int s)
-{
-  dis[s]=0,vis[s]=1;q.push(s);
-  while (!q.empty())
-  {
-    int x=q.front();q.pop();
-    vis[x]=0;
-    for (int i=head[x];i;i=Next[i])
-    {
-      int y=ver[i],z=edge[i];
-      if (dis[y]&gt;dis[x]+z)
-      {
-        dis[y]=dis[x]+z;
-        if (!vis[y])
-        {
-          q.push(y);
-          vis[y]=1;
-        }
-      }
-    }
-  }
-}
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
 
-int main()
-{
-  fast;
-  cin&gt;&gt;n&gt;&gt;m&gt;&gt;s;
-  for (int i=1;i&lt;=m;i++)
-  {
-    int x,y,z;
-    cin&gt;&gt;x&gt;&gt;y&gt;&gt;z;
-    add_edge(x,y,z);
-  }
-  for (int i=1;i&lt;=n;i++)   dis[i]=2147483647;
-  spfa(s);
-  for (int i=1;i&lt;=n;i++)
-     cout&lt;&lt;dis[i]&lt;&lt;' ';
-  return 0;
-}
-</code></pre>
-<p>(PS:之前一直忘了memset是对字节赋值，写出了&quot;memset(dis,inf,sizeof(dis))&quot;的惊人代码，死活调不对QAQ)</p>
-<h2 id="不定期更新">不定期更新</h2>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[关于]]></title>
-        <id>https://ttyclear.github.io/post/about/</id>
-        <link href="https://ttyclear.github.io/post/about/">
-        </link>
-        <updated>2019-01-25T11:09:48.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
-<p>吸走过路dalao的rp</p>
-</blockquote>
-<p>这是ttyclear的blog</p>
-<p>博主暂时AFO了，可能不会写东西（但还是搭了这么个玩意儿）</p>
-<p>洛谷：</p>
-<p><a href="https://www.luogu.com.cn/user/42001">ttyclear</a></p>
-<p>Codeforces：</p>
-<p><a href="https://codeforces.com/profile/tyclear">tyclear</a></p>
-<p><a href="https://codeforces.com/profile/ttyclear">ttyclear</a></p>
-<p>友链：</p>
-<p><a href="http://lycltb.top">神仙lyc<img src="https://s1.ax1x.com/2020/10/02/0lHE36.png" alt="lycorz" loading="lazy"></a></p>
-<p><a href="https://m-sea-blog.com/">神仙M_sea<img src="https://secure.gravatar.com/avatar/7647dd82ae86231bbd78c3be34467e59?s=100&amp;r=G&amp;d=" alt="mseaorz" loading="lazy"></a></p>
-]]></content>
-    </entry>
-</feed>
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
