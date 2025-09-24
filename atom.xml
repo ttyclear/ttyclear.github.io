@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ttyclear.github.io</id>
+    <title>ttyclear&apos;s blog</title>
+    <updated>2025-09-24T12:09:44.823Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://ttyclear.github.io"/>
+    <link rel="self" href="https://ttyclear.github.io/atom.xml"/>
+    <logo>https://ttyclear.github.io/images/avatar.png</logo>
+    <icon>https://ttyclear.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2025, ttyclear&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[GO批的自我修养——如何让5E与WSL2共存？]]></title>
+        <id>https://ttyclear.github.io/post/go-pi-de-zi-wo-xiu-yang-ru-he-rang-5e-yu-wsl2-gong-cun/</id>
+        <link href="https://ttyclear.github.io/post/go-pi-de-zi-wo-xiu-yang-ru-he-rang-5e-yu-wsl2-gong-cun/">
+        </link>
+        <updated>2025-09-24T11:10:09.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p><strong>先说结论：没辙，但是博主可以提供一个最速重启方法，使你能够在打5E和用wsl2间快速切换</strong></p>
+</blockquote>
+<h2 id="问题来源">问题来源</h2>
+<p>经常打5e并且不幸用wsl2的朋友可能遇见过如下反作弊报错：<br>
+<img src="https://ttyclear.github.io/post-images/1758713341992.png" alt="" loading="lazy"></p>
+<p>官方给的<a href="https://csgo.5eplay.com/forum/970917">解决方法</a></p>
+<p>5E反作弊正常部署需要关闭Hyper-V和VBS，但是wsl2正是基于这些功能运行的。因此，我们需要在 能游玩5E 和 能运行wsl 两种状态间不断切换</p>
+<h2 id="解决方法">解决方法</h2>
+<p>理论上下列过程只会影响wsl2能否正常启动，不会涉及到虚拟机本身的数据，但是保险起见建议在做下列步骤前先用命令行关闭wsl：</p>
+<pre><code class="language-powershell">wsl --shutdown
+</code></pre>
+<p>不推荐按照官方指南中的手动处理方法去解决，即使你顺着删了hyper-v、关了vbs、禁了组策略，wsl依然有可能运行并且继续报错，推测是wsl2 setting会覆写部分设置 <s>（也可能是我单纯没关全）</s></p>
+<p>在官方的指南中附上了一个<a href="https://wwt.lanzouu.com/iwEpt33sirch">一键解决脚本</a>，解压密码5e5e，下载后右键管理员运行，完成后按提示重启</p>
+<p>重启过程中BIOS会接连给你弹两个询问，第一个是要不要关Credential Guard，按ESC不关；第二个是要不要关VBS，按F3关掉</p>
+<p>等待重启完成，这个时候你应该能快乐打5e了，自然wsl现在是不能运行的</p>
+<h2 id="战斗结束如何切回去">战斗结束如何切回去</h2>
+<p>以管理员身份在cmd或powershell中运行：</p>
+<pre><code class="language-powershell">bcdedit /set hypervisorlaunchtype on
+</code></pre>
+<p>Win+S找到“编辑组策略”，在“计算机配置/管理模板/系统/Device Guard”目录下找到“打开基于虚拟化的安全”项，将其状态设为“已启用”<br>
+<img src="https://ttyclear.github.io/post-images/1758715236547.png" alt="" loading="lazy"></p>
+<p>Win+S找到“启用或关闭Windows功能”，重新启用Hyper-V选项，然后重启</p>
+<p>这个时候应该能重新运行wsl了，如果不行，检查虚拟化、wsl功能等是否启用，或者按照终端的报错去排查</p>
+<h2 id="better-solution">Better Solution?</h2>
+<ol>
+<li><s>打完美，完美没这事儿</s></li>
+<li><s>装个双系统</s></li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ttyclear的板子]]></title>
+        <id>https://ttyclear.github.io/post/ttyclear-de-ban-zi/</id>
+        <link href="https://ttyclear.github.io/post/ttyclear-de-ban-zi/">
+        </link>
+        <updated>2020-09-26T06:16:40.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="数据结构">数据结构</h1>
+<h2 id="并查集">并查集</h2>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+#define endl '\n'
+#define fast ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)
+#define ll long long
+#define ull unsigned long long
+using namespace std;
+const int N=1e5+5;
+const int M=2*1e5+5;
+const ll inf=0x7fffffff;  //2147483647
+const int mod=1e9+7;
+const int fx[5]={0,-1,0,1,0};
+const int fy[5]={0,0,-1,0,1};
+inline int read()
+{
+    int x=0,f=1;char ch=getchar();
+    while (ch&lt;'0' || ch&gt;'9'){if(ch=='-')f=-1;ch=getchar();}
+    while (ch&gt;='0' &amp;&amp; ch&lt;='9'){x=(x&lt;&lt;3)+(x&lt;&lt;1);x+=(ch-'0');ch=getchar();}
+    return x*f;
+}
+
+void write(int x)
+{
+    if (x&lt;0) putchar('-'),x=-x;
+    if (x&gt;10) write(x/10);
+    putchar(x%10+'0');
+}
+
+int n,m,f[N];
+int find(int x){return f[x] == x ? x : f[x] = find(f[x]);
+}
+int main()
+{
+	cin&gt;&gt;n&gt;&gt;m;
+	for (int i = 1;i &lt;= n;i++)
+	   f[i] = i;
+	for (int i = 1;i &lt;= m;i++)
+	{
+		int z,x,y;
+		cin&gt;&gt;z&gt;&gt;x&gt;&gt;y;
+		if (z==1)
+		   f[find(x)]=find(y);  //将能找到最早的祖先节点合并
+		else if (find(x)==find(y))
+		   cout&lt;&lt;&quot;Y\n&quot;;
+		else
+		   cout&lt;&lt;&quot;N\n&quot;;
+	}
+	return 0;
+}
+</code></pre>
+<h1 id="图论">图论</h1>
+<h2 id="omncdot-logn-堆优化dijkstra"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mo>(</mo><mi>m</mi><mo>+</mo><mi>n</mi><mo>)</mo><mo>⋅</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O((m+n)\cdot logn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mopen">(</span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span> 堆优化Dijkstra</h2>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+#define endl '\n'
+#define fast ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)
+#define ll long long
+#define ull unsigned long long
+using namespace std;
+const int N=1e5+5;
+const int M=2*1e5+5;
+const ll inf=0x7fffffff;  //2147483647
+const int mod=1e9+7;
+const int fx[5]={0,-1,0,1,0};
+const int fy[5]={0,0,-1,0,1};
+inline int read()
+{
+    int x=0,f=1;char ch=getchar();
+    while (ch&lt;'0' || ch&gt;'9'){if(ch=='-')f=-1;ch=getchar();}
+    while (ch&gt;='0' &amp;&amp; ch&lt;='9'){x=(x&lt;&lt;3)+(x&lt;&lt;1);x+=(ch-'0');ch=getchar();}
+    return x*f;
+}
+
+void write(int x)
+{
+    if (x&lt;0) putchar('-'),x=-x;
+    if (x&gt;10) write(x/10);
+    putchar(x%10+'0');
+}
+
+int n, m, s, tot;
+ll Next[M], edge[M], ver[M], head[N], dis[N], path[N];
+bool vis[N];
+
+void add_edge(int x, int y, int z)  //start, end, value
+{
+  ver[++tot] = y;
+  edge[tot] = z;
+  Next[tot] = head[x];
+  head[x] = tot;
+}
+
+struct node
+{
+  ll dis;
+  int id;
+  bool operator&lt;(const node&amp;tty)const{return tty.dis &lt; dis;}
+};
+priority_queue&lt;node&gt;q;
+
+void dijkstra(int s)
+{
+  memset(dis, 0x3f, sizeof(dis));
+  dis[s] = 0;
+  q.push(node{0, s});
+  while (q.size())
+  {
+    int x = q.top().id;
+    q.pop();
+    if (vis[x])   
+      continue;
+    vis[x] = 1;
+    for (int i = head[x];i;i = Next[i])
+    {
+      int y = ver[i],z = edge[i];
+      if (dis[y] &gt; dis[x] + z)
+      {
+        dis[y] = dis[x] + z;
+        path[y] = x;
+        q.push(node{dis[y], y});
+      }
+    }
+  }
+}
+
+void print_path(int start, int end)
+{
+  string string_of_path;
+  for (int i = end;i;i = path[i])
+    string_of_path = to_string(i) + ' ' + string_of_path;
+  cout&lt;&lt;string_of_path&lt;&lt;endl;
+}
+
+int main()
+{
+  cin&gt;&gt;n&gt;&gt;m&gt;&gt;s;
+  for (int i = 1;i &lt;= m;i++)
+  {
+    int x,y,z;
+    cin&gt;&gt;x&gt;&gt;y&gt;&gt;z;
+    add_edge(x, y, z);
+  }
+  dijkstra(s);
+  for (int i=1;i&lt;=n;i++)
+     cout&lt;&lt;dis[i]&lt;&lt;' ';
+  system(&quot;pause&quot;);
+  return 0;
+}
+</code></pre>
+<h2 id="okm的spfak为常数"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>k</mi><mi>m</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(km)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord mathdefault">m</span><span class="mclose">)</span></span></span></span>的SPFA（k为常数）</h2>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+#define endl '\n'
+#define fast ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)
+#define ll long long
+#define ull unsigned long long
+using namespace std;
+const int N=1e5+5;
+const int M=2*1e5+5;
+const ll inf=0x7fffffff;  //2147483647
+const int mod=1e9+7;
+const int fx[5]={0,-1,0,1,0};
+const int fy[5]={0,0,-1,0,1};
+inline int read()
+{
+    int x=0,f=1;char ch=getchar();
+    while (ch&lt;'0' || ch&gt;'9'){if(ch=='-')f=-1;ch=getchar();}
+    while (ch&gt;='0' &amp;&amp; ch&lt;='9'){x=(x&lt;&lt;3)+(x&lt;&lt;1);x+=(ch-'0');ch=getchar();}
+    return x*f;
+}
+
+void write(int x)
+{
+    if (x&lt;0) putchar('-'),x=-x;
+    if (x&gt;10) write(x/10);
+    putchar(x%10+'0');
+}
+
+int n, m, s, tot;
+ll Next[M], edge[M], ver[M], head[N], dis[N], path[N];
+bool vis[N];
+queue&lt;int&gt;q;
+
+void add_edge(int x, int y, int z)  //start, end, value
+{
+  ver[++tot] = y;
+  edge[tot] = z;
+  Next[tot] = head[x];
+  head[x] = tot;
+}
+
+void spfa(int s)
+{
+  dis[s] = 0, vis[s] = 1;
+  q.push(s);
+  while (!q.empty())
+  {
+    int x = q.front();
+    q.pop();
+    vis[x] = 0;
+    for (int i = head[x];i;i = Next[i])
+    {
+      int y = ver[i],z = edge[i];  //from node x to node y with value z
+      if (dis[y] &gt; dis[x] + z)  //relax
+      {
+        dis[y] = dis[x] + z;
+        if (!vis[y])
+        {
+          q.push(y);
+          vis[y] = 1;
+          path[y] = x;  //the way to y goes from x
+        }
+      }
+    }
+  }
+}
+
+void print_path(int start, int end)  //start node1 node2 ... end
+{
+  string string_of_path;
+  for (int i = end;i;i = path[i])
+    string_of_path = to_string(i) + ' ' + string_of_path;  //reverse
+  cout&lt;&lt;string_of_path&lt;&lt;endl;
+}
+
+int main()
+{
+  cin&gt;&gt;n&gt;&gt;m&gt;&gt;s;
+  for (int i = 1;i &lt;= m;i++)
+  {
+    int x,y,z;
+    cin&gt;&gt;x&gt;&gt;y&gt;&gt;z;
+    add_edge(x, y, z);
+    // add_edge(y, x, z); 对于无向图记得双向加边
+  }
+  for (int i = 1;i &lt;= n;i++)   dis[i] = inf;
+  spfa(s);
+  for (int i = 1;i &lt;= n;i++)
+    cout&lt;&lt;dis[i]&lt;&lt;' ';
+  system(&quot;pause&quot;);
+  return 0;
+}
+</code></pre>
+<p>(PS:之前一直忘了memset是对字节赋值，写出了&quot;memset(dis,inf,sizeof(dis))&quot;的惊人代码，死活调不对QAQ)</p>
+<h2 id="oeloge并查集实现kruskal"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>E</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>E</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(ElogE)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mclose">)</span></span></span></span>并查集实现kruskal</h2>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+#define endl '\n'
+#define fast ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)
+#define ll long long
+#define ull unsigned long long
+using namespace std;
+const int N=1e5+5;
+const int M=2*1e5+5;
+const ll inf=0x7fffffff;  //2147483647
+const int mod=1e9+7;
+const int fx[5]={0,-1,0,1,0};
+const int fy[5]={0,0,-1,0,1};
+inline int read()
+{
+    int x=0,f=1;char ch=getchar();
+    while (ch&lt;'0' || ch&gt;'9'){if(ch=='-')f=-1;ch=getchar();}
+    while (ch&gt;='0' &amp;&amp; ch&lt;='9'){x=(x&lt;&lt;3)+(x&lt;&lt;1);x+=(ch-'0');ch=getchar();}
+    return x*f;
+}
+
+void write(int x)
+{
+    if (x&lt;0) putchar('-'),x=-x;
+    if (x&gt;10) write(x/10);
+    putchar(x%10+'0');
+}
+
+int n, m, f[N], ans, cnt;
+struct Edge
+{
+	int x,y,z;
+}edge[M];
+bool cmp(Edge a, Edge b){return a.z &lt; b.z;}
+int find(int x){return f[x] == x ? x : f[x]=find(f[x]);}
+int main()
+{
+	cin&gt;&gt;n&gt;&gt;m;
+	for (int i = 1; i &lt;= n;i++)   f[i] = i;
+	for (int i = 1;i &lt;= m;i++)
+	{
+		cin&gt;&gt;edge[i].x&gt;&gt;edge[i].y&gt;&gt;edge[i].z;
+	}
+	sort(edge+1, edge+m+1, cmp);
+	for (int i = 1;i &lt;= m;i++)
+	{
+		if (find(edge[i].x) ^ find(edge[i].y))  //两点不在同一路径上（同一个并查集里）
+		{
+			ans += edge[i].z;
+			f[find(edge[i].x)] = find(edge[i].y);
+			cnt++;
+		}
+		if (cnt == n-1)
+		   break;
+	}
+	if (ans)
+	   cout&lt;&lt;ans&lt;&lt;endl;
+	else
+	   cout&lt;&lt;&quot;orz\n&quot;;
+	system(&quot;pause&quot;);
+	return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于]]></title>
+        <id>https://ttyclear.github.io/post/about/</id>
+        <link href="https://ttyclear.github.io/post/about/">
+        </link>
+        <updated>2019-01-25T11:09:48.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="upd-20250806">UPD: 2025.08.06</h3>
+<p>终于又双叒叕把这个blog给搭起来了，这个站大概已经有了6年，其中3年处于无人更新状态，2年处于爆炸状态，不容易不容易（）</p>
+<hr>
+<p>你好！我是ttyclear，Artificial Intelligence @ SCUT 本科在读。</p>
+<p>很久很久以前是个OIer <s>（很菜）</s>，前 <a href="https://github.com/SCUT-RobotIC">RobotIC机器人实验室</a> 算法组成员，打了两年Robocon比赛。技能点集中于LLM与具身智能方向，以后也可能会多发点这一块的blog。</p>
+<p>成分十分复杂：主玩Galgame、RTS、FPS、音游外加一些杂七杂八的二游；日音+EDM爱好者；F1心碎乐扣粉。。。<s>是个圈子都有可能沾一点</s></p>
+<p>一来本人暂时没什么pub二来没有拿这个blog找PhD找工的想法，因此如你所见blog的氛围还是很轻松的，希望我零碎时间在这里记下的点点滴滴能对你有所帮助 XD</p>
+<h3 id="contact-me">Contact Me：</h3>
+<p><strong>Email:</strong> ttyclear@gmail.com<br>
+<strong><a href="https://github.com/ttyclear">Github</a></strong><br>
+<strong><a href="https://www.zhihu.com/people/ttyclear">知乎</a></strong></p>
+]]></content>
+    </entry>
+</feed>

@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="Gridea静态个人博客">
+<meta name="description" content="">
+<meta name="theme-color" content="#4dabf7">
+<title>关于 | ttyclear&#39;s blog</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1758715781477">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="stylesheet" href="/media/css/pisces.css">
+
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link
+  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
+
+<link href="/media/hljs/styles/default.css"
+  rel="stylesheet">
+
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+  <meta name="description" content="关于" />
+  <meta name="keywords" content="" />
+</head>
+
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    
+<div class="pisces">
+  <header class="header  ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>ttyclear&#39;s blog</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">致瞬息万变之物，及亘古不变之物</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/" target="_self">
+                  首页
+                </a>
+              
+            </li>
+          
+            
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/archives/" target="_self">
+                  归档
+                </a>
+              
+            </li>
+          
+            
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/tags/" target="_self">
+                  标签
+                </a>
+              
+            </li>
+          
+            
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/about/" target="_self">
+                  关于
+                </a>
+              
+            </li>
+          
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+    <div
+      class="section-layout pisces ">
+      <div class="section-layout-wrapper">
+        
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body pisces" id="sidebar_body">
+        
+          
+            <div class="post-side-meta" id="post_side_meta">
+              
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">ttyclear</p>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">3</span>
+        <span class="site-item-stat-name">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">0</span>
+        <span class="site-item-stat-name">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">0</span>
+        <span class="site-item-stat-name">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+      <div class="sidebar-item" style="border-top: 1px dotted #ccc; margin-top: 10px;">
+      </div>
+    
+  
+  
+
+  
+    <div class="sidebar-item right-motion sidebar-item-friends">
+      
+        <p class="friends-title"><i class="fa fa-ship"></i> 友链</p>
+      
+      <div class="friends-box">
+        
+          <p>
+            <a href="https://whythz.github.io/">游戏开发大手子 WhythZ</a>
+          </p>
+        
+          <p>
+            <a href="https://m-sea-blog.com/">M_sea</a>
+          </p>
+        
+          <p>
+            <a href="https://lycltb.top/">LTb_</a>
+          </p>
+        
+      </div>
+    </div>
+  
+
+
+</div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#upd-20250806">UPD: 2025.08.06</a></li>
+<li><a href="#contact-me">Contact Me：</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
+          
+        
+      </div>
+    </div>
+  
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://ttyclear.github.io/post/about/">
+      关于
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item">
+      <i class="fa fa-thumb-tack"></i>
+      <span>置顶</span>
+      <span class="post-meta-divider">|</span>
+    </span>
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>2019-01-25</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>1分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>247<span class="pc-show">字数</span></span>
+    </span>
+    
+  </div>
+</header>
+            <div class="post-body next-md-body" id="post_body">
+              <h3 id="upd-20250806">UPD: 2025.08.06</h3>
+<p>终于又双叒叕把这个blog给搭起来了，这个站大概已经有了6年，其中3年处于无人更新状态，2年处于爆炸状态，不容易不容易（）</p>
+<hr>
+<p>你好！我是ttyclear，Artificial Intelligence @ SCUT 本科在读。</p>
+<p>很久很久以前是个OIer <s>（很菜）</s>，前 <a href="https://github.com/SCUT-RobotIC">RobotIC机器人实验室</a> 算法组成员，打了两年Robocon比赛。技能点集中于LLM与具身智能方向，以后也可能会多发点这一块的blog。</p>
+<p>成分十分复杂：主玩Galgame、RTS、FPS、音游外加一些杂七杂八的二游；日音+EDM爱好者；F1心碎乐扣粉。。。<s>是个圈子都有可能沾一点</s></p>
+<p>一来本人暂时没什么pub二来没有拿这个blog找PhD找工的想法，因此如你所见blog的氛围还是很轻松的，希望我零碎时间在这里记下的点点滴滴能对你有所帮助 XD</p>
+<h3 id="contact-me">Contact Me：</h3>
+<p><strong>Email:</strong> ttyclear@gmail.com<br>
+<strong><a href="https://github.com/ttyclear">Github</a></strong><br>
+<strong><a href="https://www.zhihu.com/people/ttyclear">知乎</a></strong></p>
+
+            </div>
+            <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      ttyclear
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://ttyclear.github.io/post/about/" title="关于">https://ttyclear.github.io/post/about/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="ttyclear的板子" href="https://ttyclear.github.io/post/ttyclear-de-ban-zi/">ttyclear的板子</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="ttyclear的板子" href="https://ttyclear.github.io/post/ttyclear-de-ban-zi/">上一篇</a>
+      
+    </div>
+    <div class="nav-next">
+      
+    </div>
+  </div>
+</div>
+            
+  
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+  <footer class="footer">
+    <div class="copyright">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
+    </div>
+    <div class="poweredby">
+      致瞬息万变之物，及亘古不变之物
+    </div>
+  </footer>
+  
+  
+  <div class="pisces back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    
+    <span class="scrollpercent">
+      <span id="back_to_top_text">0</span>%
+    </span>
+    
+  </div>
+  
+    <div class="bg-img">
+      <img src="/media/images/background.jpg" />
+    </div>
+  
+  
+  
+</div>
+<script>
+
+  let sideBarOpen = 'sidebar-open';
+  let body = document.body;
+  let back2Top = document.querySelector('#back_to_top'),
+  back2TopText = document.querySelector('#back_to_top_text'),
+  drawerBox = document.querySelector('#drawer_box'),
+  rightSideBar = document.querySelector('.sidebar'),
+  viewport = document.querySelector('body');
+
+  function scrollAnimation(currentY, targetY) {
+   
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function(e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+  
+  window.addEventListener('scroll', function(e) {
+    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+  
+  let hasCacu = false;
+  window.onresize = function() {
+    if (window.width > 991) {
+      calcuHeight();
+    } else {
+      hasCacu = false;
+    }
+  }
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+      let sideBar = document.querySelector('.sidebar');
+      let navUl = document.querySelector('#site_nav');
+      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+  
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingRight: '0px'
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingLeft: '0px'
+      };
+    }
+
+    drawerBox.onclick = function() {
+      open = !open;
+      window.Velocity(rightSideBar, 'stop');
+      window.Velocity(viewport, 'stop');
+      window.Velocity(rightMotions, 'stop');
+      if (open) {
+        window.Velocity(rightSideBar, {
+          width: RIGHT_MOVE_DIS
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, transitionDir,{ });
+          }
+        })
+        window.Velocity(viewport, openProp,{
+          duration: MOTION_TIME
+        });
+      } else {
+        window.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
+        })
+        window.Velocity(viewport, closeProp ,{
+          duration: MOTION_TIME
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    }
+  }
+
+  // 链接跳转
+  let newWindow = 'false'
+  if (newWindow === 'true') {
+    let links = document.querySelectorAll('.post-body a')
+    links.forEach(item => {
+      if (!item.classList.contains('btn')) {
+        item.setAttribute("target","_blank");
+      }
+    })
+  }
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+
+</script>
+    <div class="light-box" id="light_box"></div>
+<script>
+  let imgs = document.querySelectorAll('.post-body img');
+  let lightBox = document.querySelector('#light_box');
+  lightBox.addEventListener('mousedown', (e) => {
+    e.preventDefault()
+  })
+  lightBox.addEventListener('mousewheel', (e) => {
+    e.preventDefault()
+  })
+  let width = window.innerWidth * 0.8;
+  lightBox.onclick = () => {
+    let img = lightBox.querySelector('img');
+    lightBox.style = '';
+    img && img.remove();
+  }
+  imgs.forEach(item => {
+    item.onclick = function (e) {
+      let lightImg = document.createElement('img');
+      lightImg.src = this.src;
+      lightBox.style = `height: 100%; opacity: 1; background-color: rgba(0, 0, 0, 0.5);cursor: zoom-out;`;
+      lightImg.style = `width: ${width}px; border: 1px solid #fff; border-radius: 2px;`;
+      lightImg.onclick = function () {
+        lightBox.style = '';
+        this.remove();
+      }
+      lightBox.append(lightImg);
+    }
+  })
+</script>
+  </div>
+</body>
+<input hidden id="copy" />
+<script>
+  //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
+  window.Clipboard = (function (window, document, navigator) {
+    var textArea,
+      copy;
+
+    // 判断是不是ios端
+    function isOS() {
+      return navigator.userAgent.match(/ipad|iphone/i);
+    }
+    //创建文本元素
+    function createTextArea(text) {
+      textArea = document.createElement('textArea');
+      textArea.value = text;
+      textArea.style.width = 0;
+      textArea.style.height = 0;
+      textArea.clientHeight = 0;
+      textArea.clientWidth = 0;
+      document.body.appendChild(textArea);
+    }
+    //选择内容
+    function selectText() {
+      var range,
+        selection;
+
+      if (isOS()) {
+        range = document.createRange();
+        range.selectNodeContents(textArea);
+        selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+      } else {
+        textArea.select();
+      }
+    }
+
+    //复制到剪贴板
+    function copyToClipboard() {
+      try {
+        document.execCommand("Copy")
+      } catch (err) {
+        alert("复制错误！请手动复制！")
+      }
+      document.body.removeChild(textArea);
+    }
+
+    copy = function (text) {
+      createTextArea(text);
+      selectText();
+      copyToClipboard();
+    };
+
+    return {
+      copy: copy
+    };
+  })(window, document, navigator);
+
+  function copyCode(e) {
+    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+      let code = e.currentTarget.querySelector('code');
+      var text = code.innerText;
+      if (e.srcElement.textContent === '复制成功') {
+        console.log('复制操作频率过高');
+        return;
+      }
+      e.srcElement.textContent = '复制成功';
+      (function (elem) {
+        setTimeout(() => {
+          if (elem.textContent === '复制成功') {
+            elem.textContent = '复制代码'
+          }
+        }, 1000);
+      })(e.srcElement)
+      Clipboard.copy(text);
+    }
+  }
+
+  let pres = document.querySelectorAll('pre');
+  pres.forEach(pre => {
+    let code = pre.querySelector('code');
+    let copyElem = document.createElement('span');
+    copyElem.classList.add('copy-code');
+    copyElem.textContent = '复制代码';
+    pre.appendChild(copyElem);
+    pre.onclick = copyCode
+  })
+</script>
+<script src="/media/js/motion.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 500
+  });
+</script>
+
+<!-- <div class="search-mask" id="search_mask">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input type="text" placeholder="搜索">
+      </div>
+      <i class="fa fa-times-circle"></i>
+    </div>
+    <div class="result">
+      
+      <div class="item">
+        <a class="result-title" href="https://ttyclear.github.io/post/go-pi-de-zi-wo-xiu-yang-ru-he-rang-5e-yu-wsl2-gong-cun/"" data-c="
+          &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;先说结论：没辙，但是博主可以提供一个最速重启方法，使你能够在打5E和用wsl2间快速切换&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;问题来源&#34;&gt;问题来源&lt;/h2&gt;
+&lt;p&gt;经常打5e并且不幸用wsl2的朋友可能遇见过如下反作弊报错：&lt;br&gt;
+&lt;img src=&#34;https://ttyclear.github.io/post-images/1758713341992.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;官方给的&lt;a href=&#34;https://csgo.5eplay.com/forum/970917&#34;&gt;解决方法&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;5E反作弊正常部署需要关闭Hyper-V和VBS，但是wsl2正是基于这些功能运行的。因此，我们需要在 能游玩5E 和 能运行wsl 两种状态间不断切换&lt;/p&gt;
+&lt;h2 id=&#34;解决方法&#34;&gt;解决方法&lt;/h2&gt;
+&lt;p&gt;理论上下列过程只会影响wsl2能否正常启动，不会涉及到虚拟机本身的数据，但是保险起见建议在做下列步骤前先用命令行关闭wsl：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-powershell&#34;&gt;wsl --shutdown
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;不推荐按照官方指南中的手动处理方法去解决，即使你顺着删了hyper-v、关了vbs、禁了组策略，wsl依然有可能运行并且继续报错，推测是wsl2 setting会覆写部分设置 &lt;s&gt;（也可能是我单纯没关全）&lt;/s&gt;&lt;/p&gt;
+&lt;p&gt;在官方的指南中附上了一个&lt;a href=&#34;https://wwt.lanzouu.com/iwEpt33sirch&#34;&gt;一键解决脚本&lt;/a&gt;，解压密码5e5e，下载后右键管理员运行，完成后按提示重启&lt;/p&gt;
+&lt;p&gt;重启过程中BIOS会接连给你弹两个询问，第一个是要不要关Credential Guard，按ESC不关；第二个是要不要关VBS，按F3关掉&lt;/p&gt;
+&lt;p&gt;等待重启完成，这个时候你应该能快乐打5e了，自然wsl现在是不能运行的&lt;/p&gt;
+&lt;h2 id=&#34;战斗结束如何切回去&#34;&gt;战斗结束如何切回去&lt;/h2&gt;
+&lt;p&gt;以管理员身份在cmd或powershell中运行：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-powershell&#34;&gt;bcdedit /set hypervisorlaunchtype on
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Win+S找到“编辑组策略”，在“计算机配置/管理模板/系统/Device Guard”目录下找到“打开基于虚拟化的安全”项，将其状态设为“已启用”&lt;br&gt;
+&lt;img src=&#34;https://ttyclear.github.io/post-images/1758715236547.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Win+S找到“启用或关闭Windows功能”，重新启用Hyper-V选项，然后重启&lt;/p&gt;
+&lt;p&gt;这个时候应该能重新运行wsl了，如果不行，检查虚拟化、wsl功能等是否启用，或者按照终端的报错去排查&lt;/p&gt;
+&lt;h2 id=&#34;better-solution&#34;&gt;Better Solution?&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;s&gt;打完美，完美没这事儿&lt;/s&gt;&lt;/li&gt;
+&lt;li&gt;&lt;s&gt;装个双系统&lt;/s&gt;&lt;/li&gt;
+&lt;/ol&gt;
+">GO批的自我修养——如何让5E与WSL2共存？</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" href="https://ttyclear.github.io/post/ttyclear-de-ban-zi/"" data-c="
+          &lt;h1 id=&#34;数据结构&#34;&gt;数据结构&lt;/h1&gt;
+&lt;h2 id=&#34;并查集&#34;&gt;并查集&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+#define endl &#39;\n&#39;
+#define fast ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)
+#define ll long long
+#define ull unsigned long long
+using namespace std;
+const int N=1e5+5;
+const int M=2*1e5+5;
+const ll inf=0x7fffffff;  //2147483647
+const int mod=1e9+7;
+const int fx[5]={0,-1,0,1,0};
+const int fy[5]={0,0,-1,0,1};
+inline int read()
+{
+    int x=0,f=1;char ch=getchar();
+    while (ch&amp;lt;&#39;0&#39; || ch&amp;gt;&#39;9&#39;){if(ch==&#39;-&#39;)f=-1;ch=getchar();}
+    while (ch&amp;gt;=&#39;0&#39; &amp;amp;&amp;amp; ch&amp;lt;=&#39;9&#39;){x=(x&amp;lt;&amp;lt;3)+(x&amp;lt;&amp;lt;1);x+=(ch-&#39;0&#39;);ch=getchar();}
+    return x*f;
+}
+
+void write(int x)
+{
+    if (x&amp;lt;0) putchar(&#39;-&#39;),x=-x;
+    if (x&amp;gt;10) write(x/10);
+    putchar(x%10+&#39;0&#39;);
+}
+
+int n,m,f[N];
+int find(int x){return f[x] == x ? x : f[x] = find(f[x]);
+}
+int main()
+{
+	cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;m;
+	for (int i = 1;i &amp;lt;= n;i++)
+	   f[i] = i;
+	for (int i = 1;i &amp;lt;= m;i++)
+	{
+		int z,x,y;
+		cin&amp;gt;&amp;gt;z&amp;gt;&amp;gt;x&amp;gt;&amp;gt;y;
+		if (z==1)
+		   f[find(x)]=find(y);  //将能找到最早的祖先节点合并
+		else if (find(x)==find(y))
+		   cout&amp;lt;&amp;lt;&amp;quot;Y\n&amp;quot;;
+		else
+		   cout&amp;lt;&amp;lt;&amp;quot;N\n&amp;quot;;
+	}
+	return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;图论&#34;&gt;图论&lt;/h1&gt;
+&lt;h2 id=&#34;omncdot-logn-堆优化dijkstra&#34;&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;O((m+n)\cdot logn)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;⋅&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.01968em;&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.03588em;&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 堆优化Dijkstra&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+#define endl &#39;\n&#39;
+#define fast ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)
+#define ll long long
+#define ull unsigned long long
+using namespace std;
+const int N=1e5+5;
+const int M=2*1e5+5;
+const ll inf=0x7fffffff;  //2147483647
+const int mod=1e9+7;
+const int fx[5]={0,-1,0,1,0};
+const int fy[5]={0,0,-1,0,1};
+inline int read()
+{
+    int x=0,f=1;char ch=getchar();
+    while (ch&amp;lt;&#39;0&#39; || ch&amp;gt;&#39;9&#39;){if(ch==&#39;-&#39;)f=-1;ch=getchar();}
+    while (ch&amp;gt;=&#39;0&#39; &amp;amp;&amp;amp; ch&amp;lt;=&#39;9&#39;){x=(x&amp;lt;&amp;lt;3)+(x&amp;lt;&amp;lt;1);x+=(ch-&#39;0&#39;);ch=getchar();}
+    return x*f;
+}
+
+void write(int x)
+{
+    if (x&amp;lt;0) putchar(&#39;-&#39;),x=-x;
+    if (x&amp;gt;10) write(x/10);
+    putchar(x%10+&#39;0&#39;);
+}
+
+int n, m, s, tot;
+ll Next[M], edge[M], ver[M], head[N], dis[N], path[N];
+bool vis[N];
+
+void add_edge(int x, int y, int z)  //start, end, value
+{
+  ver[++tot] = y;
+  edge[tot] = z;
+  Next[tot] = head[x];
+  head[x] = tot;
+}
+
+struct node
+{
+  ll dis;
+  int id;
+  bool operator&amp;lt;(const node&amp;amp;tty)const{return tty.dis &amp;lt; dis;}
+};
+priority_queue&amp;lt;node&amp;gt;q;
+
+void dijkstra(int s)
+{
+  memset(dis, 0x3f, sizeof(dis));
+  dis[s] = 0;
+  q.push(node{0, s});
+  while (q.size())
+  {
+    int x = q.top().id;
+    q.pop();
+    if (vis[x])   
+      continue;
+    vis[x] = 1;
+    for (int i = head[x];i;i = Next[i])
+    {
+      int y = ver[i],z = edge[i];
+      if (dis[y] &amp;gt; dis[x] + z)
+      {
+        dis[y] = dis[x] + z;
+        path[y] = x;
+        q.push(node{dis[y], y});
+      }
+    }
+  }
+}
+
+void print_path(int start, int end)
+{
+  string string_of_path;
+  for (int i = end;i;i = path[i])
+    string_of_path = to_string(i) + &#39; &#39; + string_of_path;
+  cout&amp;lt;&amp;lt;string_of_path&amp;lt;&amp;lt;endl;
+}
+
+int main()
+{
+  cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;m&amp;gt;&amp;gt;s;
+  for (int i = 1;i &amp;lt;= m;i++)
+  {
+    int x,y,z;
+    cin&amp;gt;&amp;gt;x&amp;gt;&amp;gt;y&amp;gt;&amp;gt;z;
+    add_edge(x, y, z);
+  }
+  dijkstra(s);
+  for (int i=1;i&amp;lt;=n;i++)
+     cout&amp;lt;&amp;lt;dis[i]&amp;lt;&amp;lt;&#39; &#39;;
+  system(&amp;quot;pause&amp;quot;);
+  return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;okm的spfak为常数&#34;&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;O(km)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.03148em;&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;的SPFA（k为常数）&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+#define endl &#39;\n&#39;
+#define fast ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)
+#define ll long long
+#define ull unsigned long long
+using namespace std;
+const int N=1e5+5;
+const int M=2*1e5+5;
+const ll inf=0x7fffffff;  //2147483647
+const int mod=1e9+7;
+const int fx[5]={0,-1,0,1,0};
+const int fy[5]={0,0,-1,0,1};
+inline int read()
+{
+    int x=0,f=1;char ch=getchar();
+    while (ch&amp;lt;&#39;0&#39; || ch&amp;gt;&#39;9&#39;){if(ch==&#39;-&#39;)f=-1;ch=getchar();}
+    while (ch&amp;gt;=&#39;0&#39; &amp;amp;&amp;amp; ch&amp;lt;=&#39;9&#39;){x=(x&amp;lt;&amp;lt;3)+(x&amp;lt;&amp;lt;1);x+=(ch-&#39;0&#39;);ch=getchar();}
+    return x*f;
+}
+
+void write(int x)
+{
+    if (x&amp;lt;0) putchar(&#39;-&#39;),x=-x;
+    if (x&amp;gt;10) write(x/10);
+    putchar(x%10+&#39;0&#39;);
+}
+
+int n, m, s, tot;
+ll Next[M], edge[M], ver[M], head[N], dis[N], path[N];
+bool vis[N];
+queue&amp;lt;int&amp;gt;q;
+
+void add_edge(int x, int y, int z)  //start, end, value
+{
+  ver[++tot] = y;
+  edge[tot] = z;
+  Next[tot] = head[x];
+  head[x] = tot;
+}
+
+void spfa(int s)
+{
+  dis[s] = 0, vis[s] = 1;
+  q.push(s);
+  while (!q.empty())
+  {
+    int x = q.front();
+    q.pop();
+    vis[x] = 0;
+    for (int i = head[x];i;i = Next[i])
+    {
+      int y = ver[i],z = edge[i];  //from node x to node y with value z
+      if (dis[y] &amp;gt; dis[x] + z)  //relax
+      {
+        dis[y] = dis[x] + z;
+        if (!vis[y])
+        {
+          q.push(y);
+          vis[y] = 1;
+          path[y] = x;  //the way to y goes from x
+        }
+      }
+    }
+  }
+}
+
+void print_path(int start, int end)  //start node1 node2 ... end
+{
+  string string_of_path;
+  for (int i = end;i;i = path[i])
+    string_of_path = to_string(i) + &#39; &#39; + string_of_path;  //reverse
+  cout&amp;lt;&amp;lt;string_of_path&amp;lt;&amp;lt;endl;
+}
+
+int main()
+{
+  cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;m&amp;gt;&amp;gt;s;
+  for (int i = 1;i &amp;lt;= m;i++)
+  {
+    int x,y,z;
+    cin&amp;gt;&amp;gt;x&amp;gt;&amp;gt;y&amp;gt;&amp;gt;z;
+    add_edge(x, y, z);
+    // add_edge(y, x, z); 对于无向图记得双向加边
+  }
+  for (int i = 1;i &amp;lt;= n;i++)   dis[i] = inf;
+  spfa(s);
+  for (int i = 1;i &amp;lt;= n;i++)
+    cout&amp;lt;&amp;lt;dis[i]&amp;lt;&amp;lt;&#39; &#39;;
+  system(&amp;quot;pause&amp;quot;);
+  return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;(PS:之前一直忘了memset是对字节赋值，写出了&amp;quot;memset(dis,inf,sizeof(dis))&amp;quot;的惊人代码，死活调不对QAQ)&lt;/p&gt;
+&lt;h2 id=&#34;oeloge并查集实现kruskal&#34;&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;O(ElogE)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.05764em;&#34;&gt;E&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.01968em;&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.03588em;&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.05764em;&#34;&gt;E&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;并查集实现kruskal&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+#define endl &#39;\n&#39;
+#define fast ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)
+#define ll long long
+#define ull unsigned long long
+using namespace std;
+const int N=1e5+5;
+const int M=2*1e5+5;
+const ll inf=0x7fffffff;  //2147483647
+const int mod=1e9+7;
+const int fx[5]={0,-1,0,1,0};
+const int fy[5]={0,0,-1,0,1};
+inline int read()
+{
+    int x=0,f=1;char ch=getchar();
+    while (ch&amp;lt;&#39;0&#39; || ch&amp;gt;&#39;9&#39;){if(ch==&#39;-&#39;)f=-1;ch=getchar();}
+    while (ch&amp;gt;=&#39;0&#39; &amp;amp;&amp;amp; ch&amp;lt;=&#39;9&#39;){x=(x&amp;lt;&amp;lt;3)+(x&amp;lt;&amp;lt;1);x+=(ch-&#39;0&#39;);ch=getchar();}
+    return x*f;
+}
+
+void write(int x)
+{
+    if (x&amp;lt;0) putchar(&#39;-&#39;),x=-x;
+    if (x&amp;gt;10) write(x/10);
+    putchar(x%10+&#39;0&#39;);
+}
+
+int n, m, f[N], ans, cnt;
+struct Edge
+{
+	int x,y,z;
+}edge[M];
+bool cmp(Edge a, Edge b){return a.z &amp;lt; b.z;}
+int find(int x){return f[x] == x ? x : f[x]=find(f[x]);}
+int main()
+{
+	cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;m;
+	for (int i = 1; i &amp;lt;= n;i++)   f[i] = i;
+	for (int i = 1;i &amp;lt;= m;i++)
+	{
+		cin&amp;gt;&amp;gt;edge[i].x&amp;gt;&amp;gt;edge[i].y&amp;gt;&amp;gt;edge[i].z;
+	}
+	sort(edge+1, edge+m+1, cmp);
+	for (int i = 1;i &amp;lt;= m;i++)
+	{
+		if (find(edge[i].x) ^ find(edge[i].y))  //两点不在同一路径上（同一个并查集里）
+		{
+			ans += edge[i].z;
+			f[find(edge[i].x)] = find(edge[i].y);
+			cnt++;
+		}
+		if (cnt == n-1)
+		   break;
+	}
+	if (ans)
+	   cout&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;endl;
+	else
+	   cout&amp;lt;&amp;lt;&amp;quot;orz\n&amp;quot;;
+	system(&amp;quot;pause&amp;quot;);
+	return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+">ttyclear的板子</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" href="https://ttyclear.github.io/post/about/"" data-c="
+          &lt;h3 id=&#34;upd-20250806&#34;&gt;UPD: 2025.08.06&lt;/h3&gt;
+&lt;p&gt;终于又双叒叕把这个blog给搭起来了，这个站大概已经有了6年，其中3年处于无人更新状态，2年处于爆炸状态，不容易不容易（）&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;你好！我是ttyclear，Artificial Intelligence @ SCUT 本科在读。&lt;/p&gt;
+&lt;p&gt;很久很久以前是个OIer &lt;s&gt;（很菜）&lt;/s&gt;，前 &lt;a href=&#34;https://github.com/SCUT-RobotIC&#34;&gt;RobotIC机器人实验室&lt;/a&gt; 算法组成员，打了两年Robocon比赛。技能点集中于LLM与具身智能方向，以后也可能会多发点这一块的blog。&lt;/p&gt;
+&lt;p&gt;成分十分复杂：主玩Galgame、RTS、FPS、音游外加一些杂七杂八的二游；日音+EDM爱好者；F1心碎乐扣粉。。。&lt;s&gt;是个圈子都有可能沾一点&lt;/s&gt;&lt;/p&gt;
+&lt;p&gt;一来本人暂时没什么pub二来没有拿这个blog找PhD找工的想法，因此如你所见blog的氛围还是很轻松的，希望我零碎时间在这里记下的点点滴滴能对你有所帮助 XD&lt;/p&gt;
+&lt;h3 id=&#34;contact-me&#34;&gt;Contact Me：&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; ttyclear@gmail.com&lt;br&gt;
+&lt;strong&gt;&lt;a href=&#34;https://github.com/ttyclear&#34;&gt;Github&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;&lt;a href=&#34;https://www.zhihu.com/people/ttyclear&#34;&gt;知乎&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+">关于</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<script>
+  // var escape = "[{&#34;content&#34;:&#34;&lt;blockquote&gt;\n&lt;p&gt;&lt;strong&gt;先说结论：没辙，但是博主可以提供一个最速重启方法，使你能够在打5E和用wsl2间快速切换&lt;/strong&gt;&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;h2 id=\&#34;问题来源\&#34;&gt;问题来源&lt;/h2&gt;\n&lt;p&gt;经常打5e并且不幸用wsl2的朋友可能遇见过如下反作弊报错：&lt;br&gt;\n&lt;img src=\&#34;https://ttyclear.github.io/post-images/1758713341992.png\&#34; alt=\&#34;\&#34; loading=\&#34;lazy\&#34;&gt;&lt;/p&gt;\n&lt;p&gt;官方给的&lt;a href=\&#34;https://csgo.5eplay.com/forum/970917\&#34;&gt;解决方法&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;5E反作弊正常部署需要关闭Hyper-V和VBS，但是wsl2正是基于这些功能运行的。因此，我们需要在 能游玩5E 和 能运行wsl 两种状态间不断切换&lt;/p&gt;\n&lt;h2 id=\&#34;解决方法\&#34;&gt;解决方法&lt;/h2&gt;\n&lt;p&gt;理论上下列过程只会影响wsl2能否正常启动，不会涉及到虚拟机本身的数据，但是保险起见建议在做下列步骤前先用命令行关闭wsl：&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-powershell\&#34;&gt;wsl --shutdown\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;不推荐按照官方指南中的手动处理方法去解决，即使你顺着删了hyper-v、关了vbs、禁了组策略，wsl依然有可能运行并且继续报错，推测是wsl2 setting会覆写部分设置 &lt;s&gt;（也可能是我单纯没关全）&lt;/s&gt;&lt;/p&gt;\n&lt;p&gt;在官方的指南中附上了一个&lt;a href=\&#34;https://wwt.lanzouu.com/iwEpt33sirch\&#34;&gt;一键解决脚本&lt;/a&gt;，解压密码5e5e，下载后右键管理员运行，完成后按提示重启&lt;/p&gt;\n&lt;p&gt;重启过程中BIOS会接连给你弹两个询问，第一个是要不要关Credential Guard，按ESC不关；第二个是要不要关VBS，按F3关掉&lt;/p&gt;\n&lt;p&gt;等待重启完成，这个时候你应该能快乐打5e了，自然wsl现在是不能运行的&lt;/p&gt;\n&lt;h2 id=\&#34;战斗结束如何切回去\&#34;&gt;战斗结束如何切回去&lt;/h2&gt;\n&lt;p&gt;以管理员身份在cmd或powershell中运行：&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-powershell\&#34;&gt;bcdedit /set hypervisorlaunchtype on\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;Win+S找到“编辑组策略”，在“计算机配置/管理模板/系统/Device Guard”目录下找到“打开基于虚拟化的安全”项，将其状态设为“已启用”&lt;br&gt;\n&lt;img src=\&#34;https://ttyclear.github.io/post-images/1758715236547.png\&#34; alt=\&#34;\&#34; loading=\&#34;lazy\&#34;&gt;&lt;/p&gt;\n&lt;p&gt;Win+S找到“启用或关闭Windows功能”，重新启用Hyper-V选项，然后重启&lt;/p&gt;\n&lt;p&gt;这个时候应该能重新运行wsl了，如果不行，检查虚拟化、wsl功能等是否启用，或者按照终端的报错去排查&lt;/p&gt;\n&lt;h2 id=\&#34;better-solution\&#34;&gt;Better Solution?&lt;/h2&gt;\n&lt;ol&gt;\n&lt;li&gt;&lt;s&gt;打完美，完美没这事儿&lt;/s&gt;&lt;/li&gt;\n&lt;li&gt;&lt;s&gt;装个双系统&lt;/s&gt;&lt;/li&gt;\n&lt;/ol&gt;\n&#34;,&#34;fileName&#34;:&#34;go-pi-de-zi-wo-xiu-yang-ru-he-rang-5e-yu-wsl2-gong-cun&#34;,&#34;abstract&#34;:&#34;&#34;,&#34;title&#34;:&#34;GO批的自我修养——如何让5E与WSL2共存？&#34;,&#34;tags&#34;:[],&#34;date&#34;:&#34;2025-09-24 19:10:09&#34;,&#34;dateFormat&#34;:&#34;2025-09-24&#34;,&#34;feature&#34;:&#34;https://ttyclear.github.io/post-images/go-pi-de-zi-wo-xiu-yang-ru-he-rang-5e-yu-wsl2-gong-cun.jpg&#34;,&#34;link&#34;:&#34;https://ttyclear.github.io/post/go-pi-de-zi-wo-xiu-yang-ru-he-rang-5e-yu-wsl2-gong-cun/&#34;,&#34;hideInList&#34;:false,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;2 min read&#34;,&#34;time&#34;:113000,&#34;words&#34;:527,&#34;minutes&#34;:2},&#34;description&#34;:&#34;\n先说结论：没辙，但是博主可以提供一个最速重启方法，使你能够在打5E和用wsl2间快速切换\n\n问题来源\n经常打5e并且不幸用wsl2的朋友可能遇见过如下反作弊报错：\n\n官方给的解决方法\n5E反作弊正常部署需要关闭Hyper-V和VBS，但是...&#34;,&#34;toc&#34;:&#34;&lt;ul class=\&#34;markdownIt-TOC\&#34;&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E9%97%AE%E9%A2%98%E6%9D%A5%E6%BA%90\&#34;&gt;问题来源&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95\&#34;&gt;解决方法&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E6%88%98%E6%96%97%E7%BB%93%E6%9D%9F%E5%A6%82%E4%BD%95%E5%88%87%E5%9B%9E%E5%8E%BB\&#34;&gt;战斗结束如何切回去&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#better-solution\&#34;&gt;Better Solution?&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&#34;},{&#34;content&#34;:&#34;&lt;h1 id=\&#34;数据结构\&#34;&gt;数据结构&lt;/h1&gt;\n&lt;h2 id=\&#34;并查集\&#34;&gt;并查集&lt;/h2&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-cpp\&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;\n#define endl &#39;\\n&#39;\n#define fast ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)\n#define ll long long\n#define ull unsigned long long\nusing namespace std;\nconst int N=1e5+5;\nconst int M=2*1e5+5;\nconst ll inf=0x7fffffff;  //2147483647\nconst int mod=1e9+7;\nconst int fx[5]={0,-1,0,1,0};\nconst int fy[5]={0,0,-1,0,1};\ninline int read()\n{\n    int x=0,f=1;char ch=getchar();\n    while (ch&amp;lt;&#39;0&#39; || ch&amp;gt;&#39;9&#39;){if(ch==&#39;-&#39;)f=-1;ch=getchar();}\n    while (ch&amp;gt;=&#39;0&#39; &amp;amp;&amp;amp; ch&amp;lt;=&#39;9&#39;){x=(x&amp;lt;&amp;lt;3)+(x&amp;lt;&amp;lt;1);x+=(ch-&#39;0&#39;);ch=getchar();}\n    return x*f;\n}\n\nvoid write(int x)\n{\n    if (x&amp;lt;0) putchar(&#39;-&#39;),x=-x;\n    if (x&amp;gt;10) write(x/10);\n    putchar(x%10+&#39;0&#39;);\n}\n\nint n,m,f[N];\nint find(int x){return f[x] == x ? x : f[x] = find(f[x]);\n}\nint main()\n{\n\tcin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;m;\n\tfor (int i = 1;i &amp;lt;= n;i++)\n\t   f[i] = i;\n\tfor (int i = 1;i &amp;lt;= m;i++)\n\t{\n\t\tint z,x,y;\n\t\tcin&amp;gt;&amp;gt;z&amp;gt;&amp;gt;x&amp;gt;&amp;gt;y;\n\t\tif (z==1)\n\t\t   f[find(x)]=find(y);  //将能找到最早的祖先节点合并\n\t\telse if (find(x)==find(y))\n\t\t   cout&amp;lt;&amp;lt;&amp;quot;Y\\n&amp;quot;;\n\t\telse\n\t\t   cout&amp;lt;&amp;lt;&amp;quot;N\\n&amp;quot;;\n\t}\n\treturn 0;\n}\n&lt;/code&gt;&lt;/pre&gt;\n&lt;h1 id=\&#34;图论\&#34;&gt;图论&lt;/h1&gt;\n&lt;h2 id=\&#34;omncdot-logn-堆优化dijkstra\&#34;&gt;&lt;span class=\&#34;katex\&#34;&gt;&lt;span class=\&#34;katex-mathml\&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=\&#34;application/x-tex\&#34;&gt;O((m+n)\\cdot logn)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=\&#34;katex-html\&#34; aria-hidden=\&#34;true\&#34;&gt;&lt;span class=\&#34;base\&#34;&gt;&lt;span class=\&#34;strut\&#34; style=\&#34;height:1em;vertical-align:-0.25em;\&#34;&gt;&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34; style=\&#34;margin-right:0.02778em;\&#34;&gt;O&lt;/span&gt;&lt;span class=\&#34;mopen\&#34;&gt;(&lt;/span&gt;&lt;span class=\&#34;mopen\&#34;&gt;(&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34;&gt;m&lt;/span&gt;&lt;span class=\&#34;mspace\&#34; style=\&#34;margin-right:0.2222222222222222em;\&#34;&gt;&lt;/span&gt;&lt;span class=\&#34;mbin\&#34;&gt;+&lt;/span&gt;&lt;span class=\&#34;mspace\&#34; style=\&#34;margin-right:0.2222222222222222em;\&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=\&#34;base\&#34;&gt;&lt;span class=\&#34;strut\&#34; style=\&#34;height:1em;vertical-align:-0.25em;\&#34;&gt;&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34;&gt;n&lt;/span&gt;&lt;span class=\&#34;mclose\&#34;&gt;)&lt;/span&gt;&lt;span class=\&#34;mspace\&#34; style=\&#34;margin-right:0.2222222222222222em;\&#34;&gt;&lt;/span&gt;&lt;span class=\&#34;mbin\&#34;&gt;⋅&lt;/span&gt;&lt;span class=\&#34;mspace\&#34; style=\&#34;margin-right:0.2222222222222222em;\&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=\&#34;base\&#34;&gt;&lt;span class=\&#34;strut\&#34; style=\&#34;height:1em;vertical-align:-0.25em;\&#34;&gt;&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34; style=\&#34;margin-right:0.01968em;\&#34;&gt;l&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34;&gt;o&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34; style=\&#34;margin-right:0.03588em;\&#34;&gt;g&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34;&gt;n&lt;/span&gt;&lt;span class=\&#34;mclose\&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 堆优化Dijkstra&lt;/h2&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-cpp\&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;\n#define endl &#39;\\n&#39;\n#define fast ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)\n#define ll long long\n#define ull unsigned long long\nusing namespace std;\nconst int N=1e5+5;\nconst int M=2*1e5+5;\nconst ll inf=0x7fffffff;  //2147483647\nconst int mod=1e9+7;\nconst int fx[5]={0,-1,0,1,0};\nconst int fy[5]={0,0,-1,0,1};\ninline int read()\n{\n    int x=0,f=1;char ch=getchar();\n    while (ch&amp;lt;&#39;0&#39; || ch&amp;gt;&#39;9&#39;){if(ch==&#39;-&#39;)f=-1;ch=getchar();}\n    while (ch&amp;gt;=&#39;0&#39; &amp;amp;&amp;amp; ch&amp;lt;=&#39;9&#39;){x=(x&amp;lt;&amp;lt;3)+(x&amp;lt;&amp;lt;1);x+=(ch-&#39;0&#39;);ch=getchar();}\n    return x*f;\n}\n\nvoid write(int x)\n{\n    if (x&amp;lt;0) putchar(&#39;-&#39;),x=-x;\n    if (x&amp;gt;10) write(x/10);\n    putchar(x%10+&#39;0&#39;);\n}\n\nint n, m, s, tot;\nll Next[M], edge[M], ver[M], head[N], dis[N], path[N];\nbool vis[N];\n\nvoid add_edge(int x, int y, int z)  //start, end, value\n{\n  ver[++tot] = y;\n  edge[tot] = z;\n  Next[tot] = head[x];\n  head[x] = tot;\n}\n\nstruct node\n{\n  ll dis;\n  int id;\n  bool operator&amp;lt;(const node&amp;amp;tty)const{return tty.dis &amp;lt; dis;}\n};\npriority_queue&amp;lt;node&amp;gt;q;\n\nvoid dijkstra(int s)\n{\n  memset(dis, 0x3f, sizeof(dis));\n  dis[s] = 0;\n  q.push(node{0, s});\n  while (q.size())\n  {\n    int x = q.top().id;\n    q.pop();\n    if (vis[x])   \n      continue;\n    vis[x] = 1;\n    for (int i = head[x];i;i = Next[i])\n    {\n      int y = ver[i],z = edge[i];\n      if (dis[y] &amp;gt; dis[x] + z)\n      {\n        dis[y] = dis[x] + z;\n        path[y] = x;\n        q.push(node{dis[y], y});\n      }\n    }\n  }\n}\n\nvoid print_path(int start, int end)\n{\n  string string_of_path;\n  for (int i = end;i;i = path[i])\n    string_of_path = to_string(i) + &#39; &#39; + string_of_path;\n  cout&amp;lt;&amp;lt;string_of_path&amp;lt;&amp;lt;endl;\n}\n\nint main()\n{\n  cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;m&amp;gt;&amp;gt;s;\n  for (int i = 1;i &amp;lt;= m;i++)\n  {\n    int x,y,z;\n    cin&amp;gt;&amp;gt;x&amp;gt;&amp;gt;y&amp;gt;&amp;gt;z;\n    add_edge(x, y, z);\n  }\n  dijkstra(s);\n  for (int i=1;i&amp;lt;=n;i++)\n     cout&amp;lt;&amp;lt;dis[i]&amp;lt;&amp;lt;&#39; &#39;;\n  system(&amp;quot;pause&amp;quot;);\n  return 0;\n}\n&lt;/code&gt;&lt;/pre&gt;\n&lt;h2 id=\&#34;okm的spfak为常数\&#34;&gt;&lt;span class=\&#34;katex\&#34;&gt;&lt;span class=\&#34;katex-mathml\&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=\&#34;application/x-tex\&#34;&gt;O(km)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=\&#34;katex-html\&#34; aria-hidden=\&#34;true\&#34;&gt;&lt;span class=\&#34;base\&#34;&gt;&lt;span class=\&#34;strut\&#34; style=\&#34;height:1em;vertical-align:-0.25em;\&#34;&gt;&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34; style=\&#34;margin-right:0.02778em;\&#34;&gt;O&lt;/span&gt;&lt;span class=\&#34;mopen\&#34;&gt;(&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34; style=\&#34;margin-right:0.03148em;\&#34;&gt;k&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34;&gt;m&lt;/span&gt;&lt;span class=\&#34;mclose\&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;的SPFA（k为常数）&lt;/h2&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-cpp\&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;\n#define endl &#39;\\n&#39;\n#define fast ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)\n#define ll long long\n#define ull unsigned long long\nusing namespace std;\nconst int N=1e5+5;\nconst int M=2*1e5+5;\nconst ll inf=0x7fffffff;  //2147483647\nconst int mod=1e9+7;\nconst int fx[5]={0,-1,0,1,0};\nconst int fy[5]={0,0,-1,0,1};\ninline int read()\n{\n    int x=0,f=1;char ch=getchar();\n    while (ch&amp;lt;&#39;0&#39; || ch&amp;gt;&#39;9&#39;){if(ch==&#39;-&#39;)f=-1;ch=getchar();}\n    while (ch&amp;gt;=&#39;0&#39; &amp;amp;&amp;amp; ch&amp;lt;=&#39;9&#39;){x=(x&amp;lt;&amp;lt;3)+(x&amp;lt;&amp;lt;1);x+=(ch-&#39;0&#39;);ch=getchar();}\n    return x*f;\n}\n\nvoid write(int x)\n{\n    if (x&amp;lt;0) putchar(&#39;-&#39;),x=-x;\n    if (x&amp;gt;10) write(x/10);\n    putchar(x%10+&#39;0&#39;);\n}\n\nint n, m, s, tot;\nll Next[M], edge[M], ver[M], head[N], dis[N], path[N];\nbool vis[N];\nqueue&amp;lt;int&amp;gt;q;\n\nvoid add_edge(int x, int y, int z)  //start, end, value\n{\n  ver[++tot] = y;\n  edge[tot] = z;\n  Next[tot] = head[x];\n  head[x] = tot;\n}\n\nvoid spfa(int s)\n{\n  dis[s] = 0, vis[s] = 1;\n  q.push(s);\n  while (!q.empty())\n  {\n    int x = q.front();\n    q.pop();\n    vis[x] = 0;\n    for (int i = head[x];i;i = Next[i])\n    {\n      int y = ver[i],z = edge[i];  //from node x to node y with value z\n      if (dis[y] &amp;gt; dis[x] + z)  //relax\n      {\n        dis[y] = dis[x] + z;\n        if (!vis[y])\n        {\n          q.push(y);\n          vis[y] = 1;\n          path[y] = x;  //the way to y goes from x\n        }\n      }\n    }\n  }\n}\n\nvoid print_path(int start, int end)  //start node1 node2 ... end\n{\n  string string_of_path;\n  for (int i = end;i;i = path[i])\n    string_of_path = to_string(i) + &#39; &#39; + string_of_path;  //reverse\n  cout&amp;lt;&amp;lt;string_of_path&amp;lt;&amp;lt;endl;\n}\n\nint main()\n{\n  cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;m&amp;gt;&amp;gt;s;\n  for (int i = 1;i &amp;lt;= m;i++)\n  {\n    int x,y,z;\n    cin&amp;gt;&amp;gt;x&amp;gt;&amp;gt;y&amp;gt;&amp;gt;z;\n    add_edge(x, y, z);\n    // add_edge(y, x, z); 对于无向图记得双向加边\n  }\n  for (int i = 1;i &amp;lt;= n;i++)   dis[i] = inf;\n  spfa(s);\n  for (int i = 1;i &amp;lt;= n;i++)\n    cout&amp;lt;&amp;lt;dis[i]&amp;lt;&amp;lt;&#39; &#39;;\n  system(&amp;quot;pause&amp;quot;);\n  return 0;\n}\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;(PS:之前一直忘了memset是对字节赋值，写出了&amp;quot;memset(dis,inf,sizeof(dis))&amp;quot;的惊人代码，死活调不对QAQ)&lt;/p&gt;\n&lt;h2 id=\&#34;oeloge并查集实现kruskal\&#34;&gt;&lt;span class=\&#34;katex\&#34;&gt;&lt;span class=\&#34;katex-mathml\&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=\&#34;application/x-tex\&#34;&gt;O(ElogE)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=\&#34;katex-html\&#34; aria-hidden=\&#34;true\&#34;&gt;&lt;span class=\&#34;base\&#34;&gt;&lt;span class=\&#34;strut\&#34; style=\&#34;height:1em;vertical-align:-0.25em;\&#34;&gt;&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34; style=\&#34;margin-right:0.02778em;\&#34;&gt;O&lt;/span&gt;&lt;span class=\&#34;mopen\&#34;&gt;(&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34; style=\&#34;margin-right:0.05764em;\&#34;&gt;E&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34; style=\&#34;margin-right:0.01968em;\&#34;&gt;l&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34;&gt;o&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34; style=\&#34;margin-right:0.03588em;\&#34;&gt;g&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34; style=\&#34;margin-right:0.05764em;\&#34;&gt;E&lt;/span&gt;&lt;span class=\&#34;mclose\&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;并查集实现kruskal&lt;/h2&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-cpp\&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;\n#define endl &#39;\\n&#39;\n#define fast ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)\n#define ll long long\n#define ull unsigned long long\nusing namespace std;\nconst int N=1e5+5;\nconst int M=2*1e5+5;\nconst ll inf=0x7fffffff;  //2147483647\nconst int mod=1e9+7;\nconst int fx[5]={0,-1,0,1,0};\nconst int fy[5]={0,0,-1,0,1};\ninline int read()\n{\n    int x=0,f=1;char ch=getchar();\n    while (ch&amp;lt;&#39;0&#39; || ch&amp;gt;&#39;9&#39;){if(ch==&#39;-&#39;)f=-1;ch=getchar();}\n    while (ch&amp;gt;=&#39;0&#39; &amp;amp;&amp;amp; ch&amp;lt;=&#39;9&#39;){x=(x&amp;lt;&amp;lt;3)+(x&amp;lt;&amp;lt;1);x+=(ch-&#39;0&#39;);ch=getchar();}\n    return x*f;\n}\n\nvoid write(int x)\n{\n    if (x&amp;lt;0) putchar(&#39;-&#39;),x=-x;\n    if (x&amp;gt;10) write(x/10);\n    putchar(x%10+&#39;0&#39;);\n}\n\nint n, m, f[N], ans, cnt;\nstruct Edge\n{\n\tint x,y,z;\n}edge[M];\nbool cmp(Edge a, Edge b){return a.z &amp;lt; b.z;}\nint find(int x){return f[x] == x ? x : f[x]=find(f[x]);}\nint main()\n{\n\tcin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;m;\n\tfor (int i = 1; i &amp;lt;= n;i++)   f[i] = i;\n\tfor (int i = 1;i &amp;lt;= m;i++)\n\t{\n\t\tcin&amp;gt;&amp;gt;edge[i].x&amp;gt;&amp;gt;edge[i].y&amp;gt;&amp;gt;edge[i].z;\n\t}\n\tsort(edge+1, edge+m+1, cmp);\n\tfor (int i = 1;i &amp;lt;= m;i++)\n\t{\n\t\tif (find(edge[i].x) ^ find(edge[i].y))  //两点不在同一路径上（同一个并查集里）\n\t\t{\n\t\t\tans += edge[i].z;\n\t\t\tf[find(edge[i].x)] = find(edge[i].y);\n\t\t\tcnt++;\n\t\t}\n\t\tif (cnt == n-1)\n\t\t   break;\n\t}\n\tif (ans)\n\t   cout&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;endl;\n\telse\n\t   cout&amp;lt;&amp;lt;&amp;quot;orz\\n&amp;quot;;\n\tsystem(&amp;quot;pause&amp;quot;);\n\treturn 0;\n}\n&lt;/code&gt;&lt;/pre&gt;\n&#34;,&#34;fileName&#34;:&#34;ttyclear-de-ban-zi&#34;,&#34;abstract&#34;:&#34;&#34;,&#34;title&#34;:&#34;ttyclear的板子&#34;,&#34;tags&#34;:[],&#34;date&#34;:&#34;2020-09-26 14:16:40&#34;,&#34;dateFormat&#34;:&#34;2020-09-26&#34;,&#34;feature&#34;:&#34;https://ttyclear.github.io/post-images/ttyclear-de-ban-zi.png&#34;,&#34;link&#34;:&#34;https://ttyclear.github.io/post/ttyclear-de-ban-zi/&#34;,&#34;hideInList&#34;:false,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;9 min read&#34;,&#34;time&#34;:512000,&#34;words&#34;:1408,&#34;minutes&#34;:9},&#34;description&#34;:&#34;数据结构\n并查集\n#include &amp;lt;bits/stdc++.h&amp;gt;\n#define endl &#39;\\n&#39;\n#define fast ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)\n#d...&#34;,&#34;toc&#34;:&#34;&lt;ul class=\&#34;markdownIt-TOC\&#34;&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84\&#34;&gt;数据结构&lt;/a&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%B9%B6%E6%9F%A5%E9%9B%86\&#34;&gt;并查集&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%9B%BE%E8%AE%BA\&#34;&gt;图论&lt;/a&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#omncdot-logn-%E5%A0%86%E4%BC%98%E5%8C%96dijkstra\&#34;&gt;&lt;span class=\&#34;katex\&#34;&gt;&lt;span class=\&#34;katex-mathml\&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=\&#34;application/x-tex\&#34;&gt;O((m+n)\\cdot logn)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=\&#34;katex-html\&#34; aria-hidden=\&#34;true\&#34;&gt;&lt;span class=\&#34;base\&#34;&gt;&lt;span class=\&#34;strut\&#34; style=\&#34;height:1em;vertical-align:-0.25em;\&#34;&gt;&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34; style=\&#34;margin-right:0.02778em;\&#34;&gt;O&lt;/span&gt;&lt;span class=\&#34;mopen\&#34;&gt;(&lt;/span&gt;&lt;span class=\&#34;mopen\&#34;&gt;(&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34;&gt;m&lt;/span&gt;&lt;span class=\&#34;mspace\&#34; style=\&#34;margin-right:0.2222222222222222em;\&#34;&gt;&lt;/span&gt;&lt;span class=\&#34;mbin\&#34;&gt;+&lt;/span&gt;&lt;span class=\&#34;mspace\&#34; style=\&#34;margin-right:0.2222222222222222em;\&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=\&#34;base\&#34;&gt;&lt;span class=\&#34;strut\&#34; style=\&#34;height:1em;vertical-align:-0.25em;\&#34;&gt;&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34;&gt;n&lt;/span&gt;&lt;span class=\&#34;mclose\&#34;&gt;)&lt;/span&gt;&lt;span class=\&#34;mspace\&#34; style=\&#34;margin-right:0.2222222222222222em;\&#34;&gt;&lt;/span&gt;&lt;span class=\&#34;mbin\&#34;&gt;⋅&lt;/span&gt;&lt;span class=\&#34;mspace\&#34; style=\&#34;margin-right:0.2222222222222222em;\&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=\&#34;base\&#34;&gt;&lt;span class=\&#34;strut\&#34; style=\&#34;height:1em;vertical-align:-0.25em;\&#34;&gt;&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34; style=\&#34;margin-right:0.01968em;\&#34;&gt;l&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34;&gt;o&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34; style=\&#34;margin-right:0.03588em;\&#34;&gt;g&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34;&gt;n&lt;/span&gt;&lt;span class=\&#34;mclose\&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 堆优化Dijkstra&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#okm%E7%9A%84spfak%E4%B8%BA%E5%B8%B8%E6%95%B0\&#34;&gt;&lt;span class=\&#34;katex\&#34;&gt;&lt;span class=\&#34;katex-mathml\&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=\&#34;application/x-tex\&#34;&gt;O(km)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=\&#34;katex-html\&#34; aria-hidden=\&#34;true\&#34;&gt;&lt;span class=\&#34;base\&#34;&gt;&lt;span class=\&#34;strut\&#34; style=\&#34;height:1em;vertical-align:-0.25em;\&#34;&gt;&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34; style=\&#34;margin-right:0.02778em;\&#34;&gt;O&lt;/span&gt;&lt;span class=\&#34;mopen\&#34;&gt;(&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34; style=\&#34;margin-right:0.03148em;\&#34;&gt;k&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34;&gt;m&lt;/span&gt;&lt;span class=\&#34;mclose\&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;的SPFA（k为常数）&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#oeloge%E5%B9%B6%E6%9F%A5%E9%9B%86%E5%AE%9E%E7%8E%B0kruskal\&#34;&gt;&lt;span class=\&#34;katex\&#34;&gt;&lt;span class=\&#34;katex-mathml\&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=\&#34;application/x-tex\&#34;&gt;O(ElogE)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=\&#34;katex-html\&#34; aria-hidden=\&#34;true\&#34;&gt;&lt;span class=\&#34;base\&#34;&gt;&lt;span class=\&#34;strut\&#34; style=\&#34;height:1em;vertical-align:-0.25em;\&#34;&gt;&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34; style=\&#34;margin-right:0.02778em;\&#34;&gt;O&lt;/span&gt;&lt;span class=\&#34;mopen\&#34;&gt;(&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34; style=\&#34;margin-right:0.05764em;\&#34;&gt;E&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34; style=\&#34;margin-right:0.01968em;\&#34;&gt;l&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34;&gt;o&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34; style=\&#34;margin-right:0.03588em;\&#34;&gt;g&lt;/span&gt;&lt;span class=\&#34;mord mathdefault\&#34; style=\&#34;margin-right:0.05764em;\&#34;&gt;E&lt;/span&gt;&lt;span class=\&#34;mclose\&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;并查集实现kruskal&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&#34;},{&#34;content&#34;:&#34;&lt;h3 id=\&#34;upd-20250806\&#34;&gt;UPD: 2025.08.06&lt;/h3&gt;\n&lt;p&gt;终于又双叒叕把这个blog给搭起来了，这个站大概已经有了6年，其中3年处于无人更新状态，2年处于爆炸状态，不容易不容易（）&lt;/p&gt;\n&lt;hr&gt;\n&lt;p&gt;你好！我是ttyclear，Artificial Intelligence @ SCUT 本科在读。&lt;/p&gt;\n&lt;p&gt;很久很久以前是个OIer &lt;s&gt;（很菜）&lt;/s&gt;，前 &lt;a href=\&#34;https://github.com/SCUT-RobotIC\&#34;&gt;RobotIC机器人实验室&lt;/a&gt; 算法组成员，打了两年Robocon比赛。技能点集中于LLM与具身智能方向，以后也可能会多发点这一块的blog。&lt;/p&gt;\n&lt;p&gt;成分十分复杂：主玩Galgame、RTS、FPS、音游外加一些杂七杂八的二游；日音+EDM爱好者；F1心碎乐扣粉。。。&lt;s&gt;是个圈子都有可能沾一点&lt;/s&gt;&lt;/p&gt;\n&lt;p&gt;一来本人暂时没什么pub二来没有拿这个blog找PhD找工的想法，因此如你所见blog的氛围还是很轻松的，希望我零碎时间在这里记下的点点滴滴能对你有所帮助 XD&lt;/p&gt;\n&lt;h3 id=\&#34;contact-me\&#34;&gt;Contact Me：&lt;/h3&gt;\n&lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; ttyclear@gmail.com&lt;br&gt;\n&lt;strong&gt;&lt;a href=\&#34;https://github.com/ttyclear\&#34;&gt;Github&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;\n&lt;strong&gt;&lt;a href=\&#34;https://www.zhihu.com/people/ttyclear\&#34;&gt;知乎&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;\n&#34;,&#34;fileName&#34;:&#34;about&#34;,&#34;abstract&#34;:&#34;&#34;,&#34;title&#34;:&#34;关于&#34;,&#34;tags&#34;:[],&#34;date&#34;:&#34;2019-01-25 19:09:48&#34;,&#34;dateFormat&#34;:&#34;2019-01-25&#34;,&#34;feature&#34;:&#34;https://ttyclear.github.io/post-images/about.png&#34;,&#34;link&#34;:&#34;https://ttyclear.github.io/post/about/&#34;,&#34;hideInList&#34;:false,&#34;isTop&#34;:true,&#34;stats&#34;:{&#34;text&#34;:&#34;1 min read&#34;,&#34;time&#34;:55000,&#34;words&#34;:247,&#34;minutes&#34;:1},&#34;description&#34;:&#34;UPD: 2025.08.06\n终于又双叒叕把这个blog给搭起来了，这个站大概已经有了6年，其中3年处于无人更新状态，2年处于爆炸状态，不容易不容易（）\n\n你好！我是ttyclear，Artificial Intelligence @ S...&#34;,&#34;toc&#34;:&#34;&lt;ul class=\&#34;markdownIt-TOC\&#34;&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#upd-20250806\&#34;&gt;UPD: 2025.08.06&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#contact-me\&#34;&gt;Contact Me：&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&#34;}]";
+  // var json = escape.substr(1, escape.length - 2);
+  // var datas = json.split(',');
+  // for (let i=0; i < datas.length; i++) {
+  //   let item = datas[i];
+  //   let attrs = item.split('34;:&#34')
+  //   debugger
+  //   console.log(datas[i])
+  // }
+  let escapeMap = new Map();
+  escapeMap.set('&#34;', '"');
+  escapeMap.set('&gt;', '>');
+  escapeMap.set('&#39;', "'");
+  escapeMap.set('&lt;', '<');
+  escapeMap.set('&quot;', '"');
+  escapeMap.set('&amp;', '&');
+</script> -->
+
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+<script type="text/javascript" src="/media/js/mouse/fireworks.js"></script>
+
+
+<script src=" /media/js/cool.js"></script>
+
+</html>
