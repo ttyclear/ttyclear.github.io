@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ttyclear.github.io</id>
+    <title>ttyclear&apos;s blog</title>
+    <updated>2026-08-17T16:12:44.692Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://ttyclear.github.io"/>
+    <link rel="self" href="https://ttyclear.github.io/atom.xml"/>
+    <logo>https://ttyclear.github.io/images/avatar.png</logo>
+    <icon>https://ttyclear.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2026, ttyclear&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[常用指令小记]]></title>
+        <id>https://ttyclear.github.io/post/chang-yong-zhi-ling-xiao-ji/</id>
+        <link href="https://ttyclear.github.io/post/chang-yong-zhi-ling-xiao-ji/">
+        </link>
+        <updated>2025-11-09T10:38:14.000Z</updated>
+        <content type="html"><![CDATA[<p>不想到处查指令，奈何有几个我也确实记不下来，就在这儿写一下</p>
+<h2 id="conda-pip">conda / pip</h2>
+<pre><code class="language-bash">conda env list
+
+conda env remove -n [ENV_NAME]
+</code></pre>
+<pre><code class="language-bash">pip install [PKG_NAME] -i https://pypi.mirrors.ustc.edu.cn/simple/--trusted-host pypi.mirrors.ustc.edu.cn
+</code></pre>
+<p>阿里云  http://mirrors.aliyun.com/pypi/simple/<br>
+中科大 https://pypi.mirrors.ustc.edu.cn/simple/<br>
+清华大学 https://pypi.tuna.tsinghua.edu.cn/simple/</p>
+<h2 id="terminal">terminal</h2>
+<pre><code class="language-bash">top
+
+lscpu
+
+free -h
+
+watch -d -n 1 nvidia-smi
+
+stat log.txt
+
+CUDA_VISIBLE_DEVICES=0,1,2,3 nohup [COMMAD] &gt; build_log.log 2&gt;&amp;1 &amp;
+
+du -h --max-depth=1 | sort -hr
+
+du -sh path/to/file
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>全称</th>
+<th>含义解释</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PID</strong></td>
+<td>Process ID</td>
+<td><strong>进程ID</strong> - 操作系统分配给每个进程的唯一标识符</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>USER</strong></td>
+<td>User</td>
+<td><strong>用户名</strong> - 启动该进程的用户账户</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>PR</strong></td>
+<td>Priority</td>
+<td><strong>优先级</strong> - 进程的调度优先级（数值越小优先级越高）</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>NI</strong></td>
+<td>Nice Value</td>
+<td><strong>友好值</strong></td>
+<td>用于调整进程优先级的数值（-20到19），负值表示更高优先级</td>
+</tr>
+<tr>
+<td><strong>VIRT</strong></td>
+<td>Virtual Memory</td>
+<td><strong>虚拟内存</strong> - 进程使用的总虚拟内存大小（包括实际使用的内存+保留但未使用的内存）</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>RES</strong></td>
+<td>Resident Memory</td>
+<td><strong>常驻内存</strong> - 进程实际使用的物理内存大小（不包含交换分区）</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SHR</strong></td>
+<td>Shared Memory</td>
+<td><strong>共享内存</strong> - 多个进程间共享的内存大小</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>S</strong></td>
+<td>Status</td>
+<td><strong>进程状态</strong></td>
+<td>常见的状态有：  <br>• <strong>R</strong> - 运行中 (Running)  <br>• <strong>S</strong> - 睡眠中 (Sleeping)  <br>• <strong>D</strong> - 不可中断睡眠  <br>• <strong>Z</strong> - 僵尸进程 (Zombie)  <br>• <strong>T</strong> - 已停止 (Stopped)</td>
+</tr>
+<tr>
+<td><strong>%CPU</strong></td>
+<td>CPU Percentage</td>
+<td><strong>CPU使用率</strong> - 进程占用的CPU时间百分比</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>%MEM</strong></td>
+<td>Memory Percentage</td>
+<td><strong>内存使用率</strong> - 进程使用的物理内存占总内存的百分比</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>TIME+</strong></td>
+<td>CPU Time</td>
+<td><strong>CPU时间</strong> - 进程自启动以来使用的总CPU时间（格式：分:秒.百分秒）</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>COMMAND</strong></td>
+<td>Command</td>
+<td><strong>命令名称</strong> - 启动该进程的命令或程序名称</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GO批的自我修养——如何让5E与WSL2共存？]]></title>
+        <id>https://ttyclear.github.io/post/go-pi-de-zi-wo-xiu-yang-ru-he-rang-5e-yu-wsl2-gong-cun/</id>
+        <link href="https://ttyclear.github.io/post/go-pi-de-zi-wo-xiu-yang-ru-he-rang-5e-yu-wsl2-gong-cun/">
+        </link>
+        <updated>2025-09-24T11:10:09.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p><strong>先说结论：没辙，但是博主可以提供一个最速重启方法，使你能够在打5E和用wsl2间快速切换</strong></p>
+</blockquote>
+<h2 id="问题来源">问题来源</h2>
+<p>经常打5e并且不幸用wsl2的朋友可能遇见过如下反作弊报错：<br>
+<img src="https://ttyclear.github.io/post-images/1758713341992.png" alt="" loading="lazy"></p>
+<p>官方给的<a href="https://csgo.5eplay.com/forum/970917">解决方法</a></p>
+<p>5E反作弊正常部署需要关闭Hyper-V和VBS，但是wsl2正是基于这些功能运行的。因此，我们需要在 能游玩5E 和 能运行wsl 两种状态间不断切换</p>
+<h2 id="解决方法">解决方法</h2>
+<p>理论上下列过程只会影响wsl2能否正常启动，不会涉及到虚拟机本身的数据，但是保险起见建议在做下列步骤前先用命令行关闭wsl：</p>
+<pre><code class="language-powershell">wsl --shutdown
+</code></pre>
+<p>不推荐按照官方指南中的手动处理方法去解决，即使你顺着删了hyper-v、关了vbs、禁了组策略，wsl依然有可能运行并且继续报错，推测是wsl2 setting会覆写部分设置 <s>（也可能是我单纯没关全）</s></p>
+<p>在官方的指南中附上了一个<a href="https://wwt.lanzouu.com/iwEpt33sirch">一键解决脚本</a>，解压密码5e5e，下载后右键管理员运行，完成后按提示重启</p>
+<p>重启过程中BIOS会接连给你弹两个询问，第一个是要不要关Credential Guard，按ESC不关；第二个是要不要关VBS，按F3关掉</p>
+<p>等待重启完成，这个时候你应该能快乐打5e了，自然wsl现在是不能运行的</p>
+<h2 id="战斗结束如何切回去">战斗结束如何切回去</h2>
+<p>以管理员身份在cmd或powershell中运行：</p>
+<pre><code class="language-powershell">bcdedit /set hypervisorlaunchtype on
+</code></pre>
+<p>Win+S找到“编辑组策略”，在“计算机配置/管理模板/系统/Device Guard”目录下找到“打开基于虚拟化的安全”项，将其状态设为“已启用”<br>
+<img src="https://ttyclear.github.io/post-images/1758715236547.png" alt="" loading="lazy"></p>
+<p>Win+S找到“启用或关闭Windows功能”，重新启用Hyper-V选项，然后重启</p>
+<p>这个时候应该能重新运行wsl了，如果不行，检查虚拟化、wsl功能等是否启用，或者按照终端的报错去排查</p>
+<h2 id="better-solution">Better Solution?</h2>
+<ol>
+<li><s>打完美，完美没这事儿</s></li>
+<li><s>装个双系统</s></li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ttyclear的板子]]></title>
+        <id>https://ttyclear.github.io/post/ttyclear-de-ban-zi/</id>
+        <link href="https://ttyclear.github.io/post/ttyclear-de-ban-zi/">
+        </link>
+        <updated>2020-09-26T06:16:40.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>UPD 2026.03.17：完善并添加一些板子给自己考CSP用，<s>AI太好用了你们知道吗</s></strong></p>
+<p><strong>UPD 2026.08.17：上300大失败，板子用处有限啊还是好好练大模拟吧，哭哭</strong></p>
+<hr>
+<h1 id="数据结构">数据结构</h1>
+<h2 id="线段树">线段树</h2>
+<pre><code class="language-cpp">// 线段树模板
+// 支持：单点修改、区间修改（区间加、区间乘）、区间查询（区间求和、区间最大值、区间GCD）
+// 双懒标记语义：对区间内每个元素先乘 lazy_mul、再加 lazy_add
+// 注意：区间GCD与区间乘兼容（gcd(ka,kb)=k·gcd(a,b)），但与区间加不兼容
+//       （因为 gcd(a+d, b+d) ≠ gcd(a,b)+d），请勿在同一题中混用区间加与GCD查询
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int n, m; // n：元素个数，m：操作次数，根据题目调整
+
+const int MAXN = 100005; // 根据题目调整
+
+// -----------------------------------------------------------------------
+// 线段树节点
+// -----------------------------------------------------------------------
+struct Node
+{
+    long long sum;      // 区间和
+    long long mx;       // 区间最大值
+    long long gcd;      // 区间GCD（与区间乘兼容；与区间加不兼容，混用时结果不保证正确）
+    long long lazy_mul; // 懒标记：乘法因子，初始为 1
+    long long lazy_add; // 懒标记：加法增量，初始为 0
+    // 待传语义：对子区间每个元素先乘 lazy_mul，再加 lazy_add
+    int len;            // 区间长度（建树时写入，后续不变）
+} tree[MAXN * 4];
+
+// -----------------------------------------------------------------------
+// 内部辅助：向上更新（由两个子节点合并父节点）
+// -----------------------------------------------------------------------
+void push_up(int node)
+{
+    tree[node].sum = tree[node * 2].sum + tree[node * 2 + 1].sum;
+    tree[node].mx  = max(tree[node * 2].mx,  tree[node * 2 + 1].mx);
+    tree[node].gcd = __gcd(tree[node * 2].gcd, tree[node * 2 + 1].gcd);
+}
+
+// -----------------------------------------------------------------------
+// 内部辅助：对节点 node 直接施加&quot;先乘 mul、再加 add&quot;的复合操作（不递归向下）
+// -----------------------------------------------------------------------
+void apply(int node, long long mul, long long add)
+{
+    tree[node].sum     = mul * tree[node].sum + add * tree[node].len;
+    tree[node].mx      = mul * tree[node].mx  + add;
+    tree[node].gcd     = mul * tree[node].gcd; // gcd(ka,kb)=k·gcd(a,b)，乘法对GCD兼容
+                                               // add 不作用于 gcd，调用方需保证不混用区间加与GCD查询
+    // 更新懒标记：将新操作 (mul, add) 追加合并到已有 lazy 上
+    // 设已有 lazy 为 f(x) = lazy_mul·x + lazy_add
+    // 新操作为 g(x) = mul·x + add
+    // 合并后 g(f(x)) = mul·(lazy_mul·x + lazy_add) + add = mul·lazy_mul·x + mul·lazy_add + add
+    tree[node].lazy_mul = mul * tree[node].lazy_mul;
+    tree[node].lazy_add = mul * tree[node].lazy_add + add;
+}
+
+// -----------------------------------------------------------------------
+// 内部辅助：将懒标记向下传递给两个子节点并清空
+// -----------------------------------------------------------------------
+void push_down(int node)
+{
+    long long mul = tree[node].lazy_mul;
+    long long add = tree[node].lazy_add;
+    if (mul != 1 || add != 0)
+    {
+        apply(node * 2,     mul, add);
+        apply(node * 2 + 1, mul, add);
+        tree[node].lazy_mul = 1; // 恢复乘法单位元
+        tree[node].lazy_add = 0; // 恢复加法单位元
+    }
+}
+
+// -----------------------------------------------------------------------
+// 建树：从数组 a[1..n] 建立线段树
+// node：当前节点编号（根为 1），l / r：当前节点管辖的区间 [l, r]
+// -----------------------------------------------------------------------
+void build(int node, int l, int r, long long a[])
+{
+    tree[node].lazy_mul = 1;
+    tree[node].lazy_add = 0;
+    tree[node].len  = r - l + 1;
+    if (l == r)
+    {
+        tree[node].sum = tree[node].mx = tree[node].gcd = a[l];
+        return;
+    }
+    int mid = (l + r) / 2;
+    build(node * 2,     l,       mid, a);
+    build(node * 2 + 1, mid + 1, r,   a);
+    push_up(node);
+}
+
+// -----------------------------------------------------------------------
+// 区间加（区间修改）：将 [ql, qr] 中每个元素加上 val
+// 令 ql == qr 即退化为单点修改
+// 注意：区间加与GCD查询不兼容，混用时GCD结果不保证正确
+// -----------------------------------------------------------------------
+void update_add(int node, int l, int r, int ql, int qr, long long val)
+{
+    if (ql &lt;= l &amp;&amp; r &lt;= qr)
+    {
+        apply(node, 1, val); // mul=1（不缩放），add=val
+        return;
+    }
+    push_down(node);
+    int mid = (l + r) / 2;
+    if (ql &lt;= mid) update_add(node * 2,     l,       mid, ql, qr, val);
+    if (qr &gt;  mid) update_add(node * 2 + 1, mid + 1, r,   ql, qr, val);
+    push_up(node);
+}
+
+// -----------------------------------------------------------------------
+// 区间乘（区间修改）：将 [ql, qr] 中每个元素乘以 val
+// 令 ql == qr 即退化为单点修改
+// 区间乘与GCD查询兼容（gcd(ka,kb)=k·gcd(a,b)），可放心同时使用
+// -----------------------------------------------------------------------
+void update_mul(int node, int l, int r, int ql, int qr, long long val)
+{
+    if (ql &lt;= l &amp;&amp; r &lt;= qr)
+    {
+        apply(node, val, 0); // mul=val，add=0（不偏移）
+        return;
+    }
+    push_down(node);
+    int mid = (l + r) / 2;
+    if (ql &lt;= mid) update_mul(node * 2,     l,       mid, ql, qr, val);
+    if (qr &gt;  mid) update_mul(node * 2 + 1, mid + 1, r,   ql, qr, val);
+    push_up(node);
+}
+
+// -----------------------------------------------------------------------
+// 区间查询
+// -----------------------------------------------------------------------
+
+// 查询区间和
+long long query_sum(int node, int l, int r, int ql, int qr)
+{
+    if (ql &lt;= l &amp;&amp; r &lt;= qr) return tree[node].sum;
+    push_down(node);
+    int mid = (l + r) / 2;
+    long long res = 0;
+    if (ql &lt;= mid) res += query_sum(node * 2,     l,       mid, ql, qr);
+    if (qr &gt;  mid) res += query_sum(node * 2 + 1, mid + 1, r,   ql, qr);
+    return res;
+}
+
+// 查询区间最大值
+long long query_max(int node, int l, int r, int ql, int qr)
+{
+    if (ql &lt;= l &amp;&amp; r &lt;= qr) return tree[node].mx;
+    push_down(node);
+    int mid = (l + r) / 2;
+    long long res = LLONG_MIN;
+    if (ql &lt;= mid) res = max(res, query_max(node * 2,     l,       mid, ql, qr));
+    if (qr &gt;  mid) res = max(res, query_max(node * 2 + 1, mid + 1, r,   ql, qr));
+    return res;
+}
+
+// 查询区间GCD（建议仅在单点修改场景下使用，区间加场景可能不准确）
+// gcd(x, 0) = x，故初始值用 0
+long long query_gcd(int node, int l, int r, int ql, int qr)
+{
+    if (ql &lt;= l &amp;&amp; r &lt;= qr) return tree[node].gcd;
+    push_down(node);
+    int mid = (l + r) / 2;
+    long long res = 0;
+    if (ql &lt;= mid) res = __gcd(res, query_gcd(node * 2,     l,       mid, ql, qr));
+    if (qr &gt;  mid) res = __gcd(res, query_gcd(node * 2 + 1, mid + 1, r,   ql, qr));
+    return res;
+}
+
+// -----------------------------------------------------------------------
+// 对外接口（统一从根节点 1，管辖区间 [1, n] 开始调用）
+// -----------------------------------------------------------------------
+long long a[MAXN]; // 原始数组（1-indexed）
+
+// 建树，使用前必须先填好 a[] 和 n
+void seg_build() { build(1, 1, n, a); }
+
+// 区间加：将 [l, r] 每个元素加 val（与GCD查询不兼容）
+void seg_add(int l, int r, long long val) { update_add(1, 1, n, l, r, val); }
+
+// 区间乘：将 [l, r] 每个元素乘以 val（与GCD查询兼容）
+void seg_mul(int l, int r, long long val) { update_mul(1, 1, n, l, r, val); }
+
+// 单点加：将下标 pos 的元素加 val（区间加的特殊情形）
+void seg_point_add(int pos, long long val) { update_add(1, 1, n, pos, pos, val); }
+
+// 单点乘：将下标 pos 的元素乘以 val（区间乘的特殊情形）
+void seg_point_mul(int pos, long long val) { update_mul(1, 1, n, pos, pos, val); }
+
+// 区间求和
+long long seg_sum(int l, int r) { return query_sum(1, 1, n, l, r); }
+
+// 区间最大值
+long long seg_max(int l, int r) { return query_max(1, 1, n, l, r); }
+
+// 区间GCD（仅单点修改场景推荐）
+long long seg_gcd(int l, int r) { return query_gcd(1, 1, n, l, r); }
+
+// 单点查询（sum / max / gcd 在单点时等价，此处统一返回 sum）
+long long seg_point_query(int pos) { return query_sum(1, 1, n, pos, pos); }
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+
+    cin &gt;&gt; n &gt;&gt; m;
+    for (int i = 1; i &lt;= n; i++) cin &gt;&gt; a[i];
+    seg_build();
+
+    // 使用示例（根据题目填写）：
+    // seg_add(l, r, val);          // 区间 [l,r] 每个元素加 val（与GCD查询不兼容）
+    // seg_mul(l, r, val);          // 区间 [l,r] 每个元素乘以 val（与GCD查询兼容）
+    // seg_point_add(pos, val);     // 单点 pos 加 val
+    // seg_point_mul(pos, val);     // 单点 pos 乘以 val
+    // seg_sum(l, r);               // 区间求和
+    // seg_max(l, r);               // 区间最大值
+    // seg_gcd(l, r);               // 区间GCD（仅与区间乘配合使用，不可与区间加混用）
+    // seg_point_query(pos);        // 单点查询
+
+    system(&quot;pause&quot;);
+    return 0;
+}
+</code></pre>
+<h2 id="st表">ST表</h2>
+<pre><code class="language-cpp">// ST 表（Sparse Table）模板
+// 适用：区间可重复贡献问题，即操作满足幂等性：op(x, x) = x
+// 本模板以维护【区间最大值】为例
+//
+// 【若要改为维护其他问题，只需修改两处标注了&quot;【合并操作修改处】&quot;的地方】：
+//   - 区间最小值：将 max 改为 min
+//   - 区间GCD：    将 max 改为 __gcd
+//   - 区间按位AND：将 max(a, b) 改为 (a &amp; b)
+//   - 区间按位OR： 将 max(a, b) 改为 (a | b)
+//   注意：区间求和不满足幂等性（sum(x, x) = 2x ≠ x），不适用 ST 表。
+//
+// 预处理时间：O(n log n)，查询时间：O(1)，空间：O(n log n)
+// 不支持修改操作；若需修改，请改用线段树。
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int n, m; // n：元素个数，m：查询次数，根据题目调整
+
+const int MAXN   = 100005; // 根据题目调整
+const int MAXLOG = 17;     // 满足 2^MAXLOG &gt;= MAXN，2^17 = 131072 &gt; 100000
+
+long long st[MAXN][MAXLOG]; // st[i][j]：从下标 i 开始、长度为 2^j 的区间的最大值
+int lg[MAXN];               // lg[i] = floor(log2(i))，预处理加速查询
+
+// -----------------------------------------------------------------------
+// 预处理对数表与 ST 表
+// a[1..n]：原始数组（1-indexed）
+// -----------------------------------------------------------------------
+void build(long long a[])
+{
+    // 预处理对数表（线性递推，避免每次调用 log2）
+    lg[1] = 0;
+    for (int i = 2; i &lt;= n; i++)
+        lg[i] = lg[i / 2] + 1;
+
+    // 初始化：长度为 1 的区间（2^0 = 1），直接取原始值
+    for (int i = 1; i &lt;= n; i++)
+        st[i][0] = a[i];
+
+    // 递推：st[i][j] = op(st[i][j-1], st[i + 2^(j-1)][j-1])
+    // 即将长度 2^j 的区间拆成两段长度 2^(j-1) 的区间合并
+    // 【合并操作修改处 1/2】：将 max 改为目标操作
+    for (int j = 1; (1 &lt;&lt; j) &lt;= n; j++)
+        for (int i = 1; i + (1 &lt;&lt; j) - 1 &lt;= n; i++)
+            st[i][j] = max(st[i][j - 1], st[i + (1 &lt;&lt; (j - 1))][j - 1]);
+}
+
+// -----------------------------------------------------------------------
+// 查询区间 [l, r] 的最大值，O(1)
+// 取 k = floor(log2(r-l+1))，用两段长为 2^k 的区间覆盖 [l, r]
+// 两段允许重叠，因为最大值满足幂等性：max(x, x) = x
+// -----------------------------------------------------------------------
+long long query(int l, int r)
+{
+    int k = lg[r - l + 1];
+    // 【合并操作修改处 2/2】：将 max 改为目标操作
+    return max(st[l][k], st[r - (1 &lt;&lt; k) + 1][k]);
+}
+
+// -----------------------------------------------------------------------
+// 对外接口
+// -----------------------------------------------------------------------
+long long a[MAXN]; // 原始数组（1-indexed）
+
+// 建表，使用前必须先填好 a[] 和 n
+void st_build() { build(a); }
+
+// 查询区间 [l, r] 的最大值
+long long st_query(int l, int r) { return query(l, r); }
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+
+    cin &gt;&gt; n &gt;&gt; m;
+    for (int i = 1; i &lt;= n; i++) cin &gt;&gt; a[i];
+    st_build();
+
+    // 使用示例（根据题目填写）：
+    // for (int i = 0; i &lt; m; i++)
+    // {
+    //     int l, r;
+    //     cin &gt;&gt; l &gt;&gt; r;
+    //     cout &lt;&lt; st_query(l, r) &lt;&lt; &quot;\n&quot;;
+    // }
+
+    system(&quot;pause&quot;);
+    return 0;
+}
+</code></pre>
+<h2 id="并查集">并查集</h2>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+#define endl '\n'
+#define fast ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)
+#define ll long long
+#define ull unsigned long long
+using namespace std;
+const int N=1e5+5;
+const int M=2*1e5+5;
+const ll inf=0x7fffffff;  //2147483647
+const int mod=1e9+7;
+const int fx[5]={0,-1,0,1,0};
+const int fy[5]={0,0,-1,0,1};
+inline int read()
+{
+    int x=0,f=1;char ch=getchar();
+    while (ch&lt;'0' || ch&gt;'9'){if(ch=='-')f=-1;ch=getchar();}
+    while (ch&gt;='0' &amp;&amp; ch&lt;='9'){x=(x&lt;&lt;3)+(x&lt;&lt;1);x+=(ch-'0');ch=getchar();}
+    return x*f;
+}
+
+void write(int x)
+{
+    if (x&lt;0) putchar('-'),x=-x;
+    if (x&gt;10) write(x/10);
+    putchar(x%10+'0');
+}
+
+int n,m,f[N];
+int find(int x){return f[x] == x ? x : f[x] = find(f[x]);
+}
+int main()
+{
+	cin&gt;&gt;n&gt;&gt;m;
+	for (int i = 1;i &lt;= n;i++)
+	   f[i] = i;
+	for (int i = 1;i &lt;= m;i++)
+	{
+		int z,x,y;
+		cin&gt;&gt;z&gt;&gt;x&gt;&gt;y;
+		if (z==1)
+		   f[find(x)]=find(y);  //将能找到最早的祖先节点合并
+		else if (find(x)==find(y))
+		   cout&lt;&lt;&quot;Y\n&quot;;
+		else
+		   cout&lt;&lt;&quot;N\n&quot;;
+	}
+	return 0;
+}
+</code></pre>
+<h1 id="图论">图论</h1>
+<h2 id="omn-cdot-logn-堆优化dijkstra"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mo>(</mo><mi>m</mi><mo>+</mo><mi>n</mi><mo>)</mo><mo>⋅</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O((m+n) \cdot logn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mopen">(</span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span> 堆优化Dijkstra</h2>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int n, m; // 节点数、边数，根据题目调整
+
+// adj[u]：存储从 u 出发的有向边 {终点 v, 权值 w}，用于 Dijkstra
+// 注意：权值为 int，若单条边权可能超过 2^31-1 需改为 pair&lt;int, long long&gt;
+vector&lt;vector&lt;pair&lt;int, int&gt;&gt;&gt; adj;
+
+void add_edge(int x, int y, int z)
+{
+	adj[x].push_back({y, z});
+}
+
+// 堆优化 Dijkstra，返回从起点 s 到各点（下标 1~tot）的最短距离，不可到达即为INF
+// 【记录路径】需额外传入或声明：vector&lt;int&gt; prev(tot + 1, -1);
+//            并在松弛成功处加：prev[y] = x;
+//            回溯路径（以终点 t 为例）：
+//              vector&lt;int&gt; path;
+//              for (int i = t; i != -1; i = prev[i]) path.push_back(i);
+//              reverse(path.begin(), path.end()); // 此时 path 从起点到终点
+vector&lt;long long&gt; dijkstra(int tot, int s)
+{
+	const long long INF = 0x3f3f3f3f3f3f3f3fLL;
+	vector&lt;long long&gt; dis(tot + 1, INF);
+	vector&lt;bool&gt; vis(tot + 1, false);
+	// vector&lt;int&gt; prev(tot + 1, -1); // 【记录路径】取消注释以启用
+	priority_queue&lt;pair&lt;long long, int&gt;, vector&lt;pair&lt;long long, int&gt;&gt;, greater&lt;&gt;&gt; pq;
+	dis[s] = 0;
+	pq.push({0, s});
+	while (!pq.empty())
+	{
+		auto [_, x] = pq.top(); // _ 为当前节点已知最短距离，仅用于弹出，不参与后续计算
+		pq.pop();
+		if (vis[x])
+			continue;
+		vis[x] = true;
+		for (auto [y, z] : adj[x])
+		{
+			if (dis[y] &gt; dis[x] + z)
+			{
+				dis[y] = dis[x] + z;
+				// prev[y] = x; // 【记录路径】取消注释以启用
+				pq.push({dis[y], y});
+			}
+		}
+	}
+	return dis;
+}
+
+int main()
+{
+	ios::sync_with_stdio(false);
+	cin.tie(0);
+
+	cin &gt;&gt; n &gt;&gt; m;
+	adj.assign(n + 1, {}); // 初始化邻接表，大小与节点数对应
+
+	// 读边示例（根据题目填写）：
+	// for (int i = 0; i &lt; m; i++)
+	// {
+	// 	int x, y, w;
+	// 	cin &gt;&gt; x &gt;&gt; y &gt;&gt; w;
+	// 	add_edge(x, y, w);
+	// 	add_edge(y, x, w); // 若无向图加两次边
+	// }
+
+	// auto dis = dijkstra(n, 1);
+	system(&quot;pause&quot;);
+	return 0;
+}
+</code></pre>
+<h2 id="okm-的spfak为常数"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>k</mi><mi>m</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(km)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord mathdefault">m</span><span class="mclose">)</span></span></span></span> 的SPFA（k为常数）</h2>
+<pre><code class="language-cpp">// 适用负权边，不适用负环，但是可以检测
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int n, m; // 节点数、边数，根据题目调整
+
+// adj[u]：存储从 u 出发的有向边 {终点 v, 权值 w}，用于 SPFA
+// 注意：权值为 int，若单条边权可能超过 2^31-1 需改为 pair&lt;int, long long&gt;
+vector&lt;vector&lt;pair&lt;int, int&gt;&gt;&gt; adj;
+
+void add_edge(int x, int y, int z)
+{
+	adj[x].push_back({y, z});
+}
+
+// SPFA，返回从起点 s 到各点（下标 1~tot）的最短距离，不可到达即为 INF
+// 若从 s 可达的范围内存在负环，返回空 vector
+// 【记录路径】需额外传入或声明：vector&lt;int&gt; prev(tot + 1, -1);
+//            并在松弛成功处加：prev[y] = x;
+//            回溯路径（以终点 t 为例）：
+//              vector&lt;int&gt; path;
+//              for (int i = t; i != -1; i = prev[i]) path.push_back(i);
+//              reverse(path.begin(), path.end()); // 此时 path 从起点到终点
+vector&lt;long long&gt; spfa(int tot, int s)
+{
+	const long long INF = 0x3f3f3f3f3f3f3f3fLL;
+	vector&lt;long long&gt; dis(tot + 1, INF);
+	vector&lt;bool&gt; in_queue(tot + 1, false);
+	vector&lt;int&gt; cnt(tot + 1, 0); // cnt[u]：节点 u 的入队次数，达到 tot 次说明存在负环
+	// vector&lt;int&gt; prev(tot + 1, -1); // 【记录路径】取消注释以启用
+	queue&lt;int&gt; q;
+	dis[s] = 0;
+	in_queue[s] = true;
+	cnt[s] = 1;
+	q.push(s);
+	while (!q.empty())
+	{
+		int x = q.front();
+		q.pop();
+		in_queue[x] = false;
+		for (auto [y, z] : adj[x])
+		{
+			if (dis[y] &gt; dis[x] + z)
+			{
+				dis[y] = dis[x] + z;
+				// prev[y] = x; // 【记录路径】取消注释以启用
+				if (!in_queue[y])
+				{
+					q.push(y);
+					in_queue[y] = true;
+					if (++cnt[y] &gt;= tot) // 入队次数达到节点总数，存在负环
+						return {};
+				}
+			}
+		}
+	}
+	return dis;
+}
+
+int main()
+{
+	ios::sync_with_stdio(false);
+	cin.tie(0);
+
+	cin &gt;&gt; n &gt;&gt; m;
+	adj.assign(n + 1, {}); // 初始化邻接表，大小与节点数对应
+
+	// 读边示例（根据题目填写）：
+	// for (int i = 0; i &lt; m; i++)
+	// {
+	// 	int x, y, w;
+	// 	cin &gt;&gt; x &gt;&gt; y &gt;&gt; w;
+	// 	add_edge(x, y, w);
+	// 	add_edge(y, x, w); // 若无向图加两次边
+	// }
+
+	// auto dis = spfa(n, 1);
+	// if (dis.empty()) cout &lt;&lt; &quot;存在负环\n&quot;;
+	system(&quot;pause&quot;);
+	return 0;
+}
+</code></pre>
+<p>(PS:之前一直忘了memset是对字节赋值，写出了&quot;memset(dis,inf,sizeof(dis))&quot;的惊人代码，死活调不对QAQ)</p>
+<h2 id="oeloge并查集实现kruskal"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>E</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>E</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(ElogE)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mclose">)</span></span></span></span>并查集实现kruskal</h2>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+#define endl '\n'
+#define fast ios::sync_with_stdio(0),cin.tie(0),cout.tie(0)
+#define ll long long
+#define ull unsigned long long
+using namespace std;
+const int N=1e5+5;
+const int M=2*1e5+5;
+const ll inf=0x7fffffff;  //2147483647
+const int mod=1e9+7;
+const int fx[5]={0,-1,0,1,0};
+const int fy[5]={0,0,-1,0,1};
+inline int read()
+{
+    int x=0,f=1;char ch=getchar();
+    while (ch&lt;'0' || ch&gt;'9'){if(ch=='-')f=-1;ch=getchar();}
+    while (ch&gt;='0' &amp;&amp; ch&lt;='9'){x=(x&lt;&lt;3)+(x&lt;&lt;1);x+=(ch-'0');ch=getchar();}
+    return x*f;
+}
+
+void write(int x)
+{
+    if (x&lt;0) putchar('-'),x=-x;
+    if (x&gt;10) write(x/10);
+    putchar(x%10+'0');
+}
+
+int n, m, f[N], ans, cnt;
+struct Edge
+{
+	int x,y,z;
+}edge[M];
+bool cmp(Edge a, Edge b){return a.z &lt; b.z;}
+int find(int x){return f[x] == x ? x : f[x]=find(f[x]);}
+int main()
+{
+	cin&gt;&gt;n&gt;&gt;m;
+	for (int i = 1; i &lt;= n;i++)   f[i] = i;
+	for (int i = 1;i &lt;= m;i++)
+	{
+		cin&gt;&gt;edge[i].x&gt;&gt;edge[i].y&gt;&gt;edge[i].z;
+	}
+	sort(edge+1, edge+m+1, cmp);
+	for (int i = 1;i &lt;= m;i++)
+	{
+		if (find(edge[i].x) ^ find(edge[i].y))  //两点不在同一路径上（同一个并查集里）
+		{
+			ans += edge[i].z;
+			f[find(edge[i].x)] = find(edge[i].y);
+			cnt++;
+		}
+		if (cnt == n-1)
+		   break;
+	}
+	if (ans)
+	   cout&lt;&lt;ans&lt;&lt;endl;
+	else
+	   cout&lt;&lt;&quot;orz\n&quot;;
+	system(&quot;pause&quot;);
+	return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于]]></title>
+        <id>https://ttyclear.github.io/post/about/</id>
+        <link href="https://ttyclear.github.io/post/about/">
+        </link>
+        <updated>2019-01-25T11:09:48.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="upd-20250806">UPD: 2025.08.06</h3>
+<p>终于又双叒叕把这个blog给搭起来了，这个站大概已经有了6年，其中3年处于无人更新状态，2年处于爆炸状态，不容易不容易（）</p>
+<hr>
+<p>你好！我是 ttyclear ，BEng in AI @ SCUT · 27' Fall</p>
+<p>这个blog目前还没成为正式的学术主页，只是随便写写，希望我零碎时间在这里记下的点点滴滴能对你有所帮助</p>
+<h3 id="contact-me">Contact Me：</h3>
+<p><strong>Email:</strong> ttyclear@gmail.com<br>
+<strong><a href="https://github.com/ttyclear">Github</a></strong><br>
+<strong><a href="https://www.zhihu.com/people/ttyclear">知乎</a></strong></p>
+]]></content>
+    </entry>
+</feed>
